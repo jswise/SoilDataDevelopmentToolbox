@@ -61,7 +61,8 @@ def errorMsg():
     try:
         tb = sys.exc_info()[2]
         tbinfo = traceback.format_tb(tb)[0]
-        theMsg = tbinfo + "\n" + str(sys.exc_type)+ ": " + str(sys.exc_value)
+        exc_type, exc_value, _ = sys.exc_info()
+        theMsg = tbinfo + "\n" + str(exc_type)+ ": " + str(exc_value)
         PrintMsg(theMsg, 2)
 
     except:
@@ -280,7 +281,7 @@ def GetFieldList(tbi_1):
 ## ===================================================================================
 def GetAreasymbols(attName, theTile):
     # Pass a query (from GetSDMCount function) to Soil Data Access designed to get the count of the selected records
-    import httplib, urllib2, json, socket
+    import http.client, urllib.request, json, socket
 
     try:
 
@@ -312,16 +313,18 @@ def GetAreasymbols(attName, theTile):
         dRequest = dict()
         dRequest["format"] = "JSON"
         dRequest["query"] = sQuery
-        jData = json.dumps(dRequest)
+        data = urllib.parse.urlencode(dRequest)
+        data = data.encode('ascii') # data should be bytes
+        # jData = json.dumps(dRequest)
 
-        # Send request to SDA Tabular service using urllib2 library
-        req = urllib2.Request(url, jData)
-        resp = urllib2.urlopen(req)
+        # Send request to SDA Tabular service using urllib library
+        # req = urllib.request(url, jData)
+        resp = urllib.request.urlopen(url, data)
         jsonString = resp.read()
 
         # Convert the returned JSON string into a Python dictionary.
         data = json.loads(jsonString)
-        del jsonString, resp, req
+        del jsonString, resp#, req
 
         # Find data section (key='Table')
         valList = list()
@@ -337,25 +340,25 @@ def GetAreasymbols(attName, theTile):
 
         else:
           # No data returned for this query
-          raise MyError, "SDA query failed to return requested information: " + sQuery
+          raise MyError("SDA query failed to return requested information: " + sQuery)
 
         if len(valList) == 0:
-            raise MyError, "SDA query failed: " + sQuery
+            raise MyError("SDA query failed: " + sQuery)
 
         return valList
 
-    except MyError, e:
-        # Example: raise MyError, "This is an error message"
+    except MyError as e:
+        # Example: raise MyError("This is an error message")
         PrintMsg(str(e), 2)
         return []
 
-    except httplib.HTTPException, e:
+    except http.client.HTTPException as e:
         PrintMsg("HTTP Error: " + str(e), 2)
         return []
 
-    except socket.error, e:
-        raise MyError, "Soil Data Access problem: " + str(e)
-        return []
+    except socket.error as e:
+        raise MyError("Soil Data Access problem: " + str(e))
+        # return []
 
     except:
         #PrintMsg(" \nSDA query failed: " + sQuery, 1)
@@ -394,11 +397,11 @@ def GetFolders(inputFolder, valList, bRequired, theTile):
                 missingList.append(shpAS)
 
         if len(missingList) > 0 and bRequired:
-            raise MyError, "Failed to find one or more required SSURGO datasets for " + theTile + ": " + ", ".join(missingList)
+            raise MyError("Failed to find one or more required SSURGO datasets for " + theTile + ": " + ", ".join(missingList))
 
         return surveyList
 
-    except MyError, err:
+    except MyError as err:
         PrintMsg(str(err), 2)
         return []
 
@@ -423,9 +426,9 @@ def ClipMuPolygons(targetLayer, aoiLayer, outputClip, theTile):
         #
         selectedPolygons = "Selected_Polygons"
         extentLayer = "AOI_Extent"
-        extentFC = os.path.join(env.scratchGDB, extentLayer)
-        outputFC = os.path.join(env.scratchGDB, selectedPolygons)
-        sortedFC = os.path.join(env.scratchGDB, "SortedPolygons")
+        extentFC = os.path.join(env.scratchGDB, extentLayer) # pylint:disable=no-member
+        outputFC = os.path.join(env.scratchGDB, selectedPolygons) # pylint:disable=no-member
+        sortedFC = os.path.join(env.scratchGDB, "SortedPolygons") # pylint:disable=no-member
         cleanupList = [extentLayer, extentFC, outputFC]
 
         for layer in cleanupList:
@@ -441,7 +444,7 @@ def ClipMuPolygons(targetLayer, aoiLayer, outputClip, theTile):
         yMax = -9999999999999
 
         # targetLayer is being used here to supply output coordinate system
-        with arcpy.da.SearchCursor(aoiLayer, ["SHAPE@"], "", targetLayer) as cur:
+        with arcpy.da.SearchCursor(aoiLayer, ["SHAPE@"], "", targetLayer) as cur: # pylint:disable=no-member
 
             for rec in cur:
                 ext = rec[0].extent
@@ -520,7 +523,7 @@ def ClipMuPolygons(targetLayer, aoiLayer, outputClip, theTile):
         if arcpy.Exists(fcPath):
             arcpy.Delete_management(fcPath)
             if arcpy.Exists(fcPath):
-                raise MyError, "Failed to delete " + fcPath
+                raise MyError("Failed to delete " + fcPath)
 
             time.sleep(1)
             arcpy.Rename_management(outputClip, fcPath)  # error here 'table already exists
@@ -547,8 +550,8 @@ def ClipMuPolygons(targetLayer, aoiLayer, outputClip, theTile):
         arcpy.SetParameter(2, outputClip)
         #PrintMsg(" \nFinished \n", 0)
 
-    except MyError, e:
-        # Example: raise MyError, "This is an error message"
+    except MyError as e:
+        # Example: raise MyError("This is an error message")
         PrintMsg(str(e) + " \n", 2)
 
     except:
@@ -605,7 +608,7 @@ if __name__ == '__main__':
             PrintMsg("***************************************************************", 0)
 
             if not arcpy.Exists(inputFolder):
-                raise MyError, "Unable to connect to folder containing SSURGO downloads (" + inputFolder + ")"
+                raise MyError("Unable to connect to folder containing SSURGO downloads (" + inputFolder + ")")
 
             # Get list of AREASYMBOLs for this state tile from LAOVERLAP table in Soil Data Mart DB
             if theTile == "Puerto Rico and U.S. Virgin Islands":
@@ -616,7 +619,7 @@ if __name__ == '__main__':
                 valList = GetAreasymbols(attName, theTile)
 
             if len(valList) == 0:
-                raise MyError, "Soil Data Access web service failed to retrieve list of areasymbols for " + theTile
+                raise MyError("Soil Data Access web service failed to retrieve list of areasymbols for " + theTile)
 
             # If the state tile is "Pacific Basin", remove the Areasymbol for "American Samoa"
             # from the list. American Samoa will not be grouped with the rest of the PAC Basin
@@ -654,7 +657,7 @@ if __name__ == '__main__':
 
                         if arcpy.Exists(outputWS):
                             # Failed to delete existing geodatabase
-                            raise MyError, "Unable to delete existing database: " + outputWS
+                            raise MyError("Unable to delete existing database: " + outputWS)
 
                 # Call SDM Export script
                 # 12-25-2013 try passing more info through the stAbbrev parameter
@@ -677,7 +680,7 @@ if __name__ == '__main__':
                         # Apply selection to AOI layer
                         sql = "UPPER(" + aoiField + ") = '" + theTile.upper() + "'"
                         arcpy.SelectLayerByAttribute_management(aoiLayer, "NEW_SELECTION", sql)
-                        bClipped = ClipMuPolygons(os.path.join(outputWS, "MUPOLYGON"), aoiLayer, os.path.join(outputWS, "MUPOLYGON_" + stAbbrev), theTile)
+                        ClipMuPolygons(os.path.join(outputWS, "MUPOLYGON"), aoiLayer, os.path.join(outputWS, "MUPOLYGON_" + stAbbrev), theTile)
 
                     # End of state clip
 
@@ -700,7 +703,7 @@ if __name__ == '__main__':
         if len(badExports) > 0:
             PrintMsg("Failed to create geodatabases for the following areas: " + ", ".join(badExports) + " \n ", 2)
 
-    except MyError, err:
+    except MyError as err:
         PrintMsg(str(err), 2)
 
     except:

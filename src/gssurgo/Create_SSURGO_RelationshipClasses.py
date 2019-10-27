@@ -23,7 +23,8 @@ def errorMsg():
     try:
         tb = sys.exc_info()[2]
         tbinfo = traceback.format_tb(tb)[0]
-        theMsg = tbinfo + " \n" + str(sys.exc_type)+ ": " + str(sys.exc_value) + " \n"
+        exc_type, exc_value, _ = sys.exc_info()
+        theMsg = tbinfo + "\n" + str(exc_type)+ ": " + str(exc_value)
         PrintMsg(theMsg, 2)
 
     except:
@@ -199,7 +200,7 @@ def CreateRL(wksp, bOverwrite):
                 env.workspace = wksp
 
             else:
-                PrintMsg("No featureclasses found in " + arcpy.Workspace + ", \nunable to create relationshipclasses", 2)
+                PrintMsg("No featureclasses found in " + arcpy.env.workspace + ", \nunable to create relationshipclasses", 2)
                 return False
 
         if len(fcList) > 0:
@@ -249,7 +250,7 @@ def CreateRL(wksp, bOverwrite):
                     PrintMsg("Unknown SSURGO datatype for featureclass (" + fc + ")", 1)
 
         else:
-            PrintMsg("No featureclasses found in " + arcpy.Workspace + ", \nunable to create relationshipclasses", 2)
+            PrintMsg("No featureclasses found in " + arcpy.env.workspace + ", \nunable to create relationshipclasses", 2)
             #return False
 
     except:
@@ -526,7 +527,7 @@ def CreateTableRelationships(wksp):
             arcpy.MakeQueryTable_management (tblList, queryTableName, "ADD_VIRTUAL_KEY_FIELD", "", fldList, sql)
 
             if not arcpy.Exists(queryTableName):
-                raise MyError, "Failed to create metadata table required for creation of relationshipclasses"
+                raise MyError("Failed to create metadata table required for creation of relationshipclasses")
 
             tblCnt = int(arcpy.GetCount_management(queryTableName).getOutput(0))
             PrintMsg(" \nQuery table has " + str(tblCnt) + " records", 1)
@@ -540,7 +541,7 @@ def CreateTableRelationships(wksp):
             # Fields in RelshpInfo table view
             # OBJECTID, LTABPHYNAME, RTABPHYNAME, RELATIONSHIPNAME, LTABCOLPHYNAME, RTABCOLPHYNAME
             # Open table view and step through each record to retrieve relationshipclass parameters             
-            with arcpy.da.SearchCursor(queryTableName, ["mdstatrshipmas_ltabphyname", "mdstatrshipmas_rtabphyname", "mdstatrshipdet_ltabcolphyname", "mdstatrshipdet_rtabcolphyname"]) as theCursor:
+            with arcpy.da.SearchCursor(queryTableName, ["mdstatrshipmas_ltabphyname", "mdstatrshipmas_rtabphyname", "mdstatrshipdet_ltabcolphyname", "mdstatrshipdet_rtabcolphyname"]) as theCursor: # pylint:disable=no-member
 
                 for rec in theCursor:
                     # Get relationshipclass parameters from current table row
@@ -576,7 +577,7 @@ def CreateTableRelationships(wksp):
 
 
         else:
-            raise MyError, "Missing one or more of the metadata tables"
+            raise MyError("Missing one or more of the metadata tables")
 
 
         # Establish Relationship between tables and Spatial layers
@@ -657,7 +658,7 @@ def CreateTableRelationships2(wksp):
             arcpy.MakeQueryTable_management (tblList, queryTableName, "ADD_VIRTUAL_KEY_FIELD", "", fldList, sql)
 
             if not arcpy.Exists(queryTableName):
-                raise MyError, "Failed to create metadata table required for creation of relationshipclasses"
+                raise MyError("Failed to create metadata table required for creation of relationshipclasses")
 
             tblCnt = int(arcpy.GetCount_management(queryTableName).getOutput(0))
             PrintMsg(" \nQuery table has " + str(tblCnt) + " records", 1)
@@ -671,7 +672,7 @@ def CreateTableRelationships2(wksp):
             # Fields in RelshpInfo table view
             # OBJECTID, LTABPHYNAME, RTABPHYNAME, RELATIONSHIPNAME, LTABCOLPHYNAME, RTABCOLPHYNAME
             # Open table view and step through each record to retrieve relationshipclass parameters             
-            with arcpy.da.SearchCursor(queryTableName, ["mdstatrshipmas_ltabphyname", "mdstatrshipmas_rtabphyname", "mdstatrshipdet_ltabcolphyname", "mdstatrshipdet_rtabcolphyname"]) as theCursor:
+            with arcpy.da.SearchCursor(queryTableName, ["mdstatrshipmas_ltabphyname", "mdstatrshipmas_rtabphyname", "mdstatrshipdet_ltabcolphyname", "mdstatrshipdet_rtabcolphyname"]) as theCursor: # pylint:disable=no-member
 
                 for rec in theCursor:
                     # Get relationshipclass parameters from current table row
@@ -707,7 +708,7 @@ def CreateTableRelationships2(wksp):
 
 
         else:
-            raise MyError, "Missing one or more of the metadata tables"
+            raise MyError("Missing one or more of the metadata tables")
 
 
         # Establish Relationship between tables and Spatial layers
@@ -768,7 +769,7 @@ def GetFCType(fc):
     #
     # The check for table fields is the absolute minimum
 
-    featureType = ""
+    # featureType = ""
 
     # Look for minimum list of required fields
     #
