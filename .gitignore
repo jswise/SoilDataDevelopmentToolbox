@@ -29,4 +29,4 @@ objects.inv
 # *.pyt.xml
 
 # Geodatabase files
-/MissingInterps.gdb/*
+# /MissingInterps.gdb/*

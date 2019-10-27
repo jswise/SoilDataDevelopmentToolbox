@@ -1,7 +1,7 @@
 import logging
 import pytest
 
-from gssurgo.userprofile import UserProfile
+from gssurgo.core.userprofile import UserProfile
 
 @pytest.fixture
 def victim():
