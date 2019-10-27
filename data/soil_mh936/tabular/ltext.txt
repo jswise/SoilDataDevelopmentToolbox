@@ -1,0 +1,19 @@
+12/13/2000 00:00:00|"Certification statements"|"date"||"04/10/01"|"14205"|"69647"
+12/13/2000 00:00:00|"Certification statements"|"notes"||"12/14/200  Survey not certified to level 3 because unpopulated data elements that are to be populated at a later date.  This survey will be recertified at a later date, but has been judged by the Pacific Basin Soil Scientist to be usable for initial SSURGO certiication."|"14205"|"69648"
+08/31/2010 00:00:00|"Edit notes"|"Legend Area Overlap"|"MLRA"|"Added MLRA Overlap 196. Transferred all map units and acreage from MLRA 192 to 196. Removed MLRA overlap 192 (incorrect). "|"14205"|"69649"
+12/28/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Urban Land: All mapunits need to be re-evaulation for Urban Land composition.  Probably new mapunits with Urban Land/soil complexes should be added and mapped."|"14205"|"69650"
+04/24/2006 00:00:00|"Miscellaneous notes"|||"April 24-2006. Due to a failure on exports to Warehouse, acres were assigned to Landfill and water units.
+
+Landfill 17 Acres = deducted 17 acres from mu #7 (from 864 to 847)
+Water 16 Acres = deducted 16 acres from mu #1. (from 927 to 911)
+
+Acres tabulated by Island:
+
+	Majuro = 2200
+	Arno   =  388
+	Airik  =  206
+	Mili   =  699
+	Taroa  =  388
+	Total  = 3881
+
+This should have been entered as a Corelation Amendment not a Text note - KP"|"14205"|"69651"

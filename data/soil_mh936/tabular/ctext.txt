@@ -1,0 +1,176 @@
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Terric Haplohemists soil is a minor component."|"18273623"|"18363278"
+11/29/2007 00:00:00|"Miscellaneous notes"|"Derived values"|"soil properties"|"The ranges and representative values for the soil properties were derived from lab samples using a median and standard deviation based on the separation of parent material, horizons, series, and geology.
+
+There properties were: Organic matter, bulk density .33 and oven-dry, AWC, .33 bar H2O, 15 bar H2O, LEP, LL, PI, CACO3, SAR, EC, CEC, ECEC, Sum of Bases, pH H20, pH CaCl2, Oxalate Fe, Extract Al, Oxalate Al, Oxalate Phos, Free Iron."|"18273623"|"18363279"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273624"|"18363280"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273624"|"18363281"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Beaches soil is a minor component."|"18273625"|"18363282"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273626"|"18363283"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"The Ngedebus, loamy sand component makes up 4 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on the lagoonside of atolls on islands. The parent material consists of water- and wind-deposited coralline sand. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is low.  Shrink-swell potential is low. This soil is rarely flooded. It is not ponded. There is no zone of water saturation within a depth of 72 inches. Organic matter content in the surface horizon is about 13 percent.  Nonirrigated land capability classification is 3s.  This soil does not meet hydric criteria.  There are no saline horizons within 30 inches of the soil surface. "|"18273627"|"18363284"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273627"|"18363285"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273617"|"18363270"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273617"|"18363271"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Beaches soil is a minor component."|"18273618"|"18363272"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"The Ngedebus, very gravelly loamy sand component makes up 80 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on the lagoonside of atolls on islands. The parent material consists of water- and wind-deposited coralline sand. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is low.  Shrink-swell potential is low. This soil is occasionally flooded. It is not ponded. A seasonal zone of water saturation is at 42 inches during January, February, March, April, May, June, July, August, September, October, November, December. Organic matter content in the surface horizon is about 2 percent.    This soil does not meet hydric criteria.  There are no saline horizons within 30 inches of the soil surface. "|"18273619"|"18363273"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Majuro soil is a minor component."|"18273620"|"18363274"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273621"|"18363275"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273621"|"18363276"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273628"|"18363286"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273628"|"18363287"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"The Ngedebus, very gravelly loamy sand, dark surface component makes up 85 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on the lagoonside of atolls on islands. The parent material consists of water- and wind-deposited coralline sand. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is low.  Shrink-swell potential is low. This soil is rarely flooded. It is not ponded. There is no zone of water saturation within a depth of 72 inches. Organic matter content in the surface horizon is about 13 percent.  Nonirrigated land capability classification is 4s.  This soil does not meet hydric criteria.  There are no saline horizons within 30 inches of the soil surface. "|"18273629"|"18363288"
+11/29/2007 00:00:00|"Miscellaneous notes"|"Derived values"|"soil properties"|"The ranges and representative values for the soil properties were derived from lab samples using a median and standard deviation based on the separation of parent material, horizons, series, and geology.
+
+There properties were: Organic matter, bulk density .33 and oven-dry, AWC, .33 bar H2O, 15 bar H2O, LEP, LL, PI, CACO3, SAR, EC, CEC, ECEC, Sum of Bases, pH H20, pH CaCl2, Oxalate Fe, Extract Al, Oxalate Al, Oxalate Phos, Free Iron."|"18273630"|"18363289"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Terric Haplohemists soil is a minor component."|"18273630"|"18363290"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Beaches soil is a minor component."|"18273631"|"18363291"
+08/02/2016 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major soil components.  The Urban land is a miscellaneous area."|"18273647"|"18363313"
+01/19/2017 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"The Ngedebus, loamy sand component makes up 40 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on the lagoonside of atolls on islands. The parent material consists of sandy marine deposits derived from coral limestone. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is low.  Shrink-swell potential is low. This soil is occasionally flooded. It is not ponded. A seasonal zone of water saturation is at 0 inches during January, February, March, April, May, June, July, August, September, October, November, December. Organic matter content in the surface horizon is about 2 percent.  Nonirrigated land capability classification is 4s.  This soil does not meet hydric criteria. The calcium carbonate equivalent within 40 inches, typically, does not exceed 40 percent. There are no saline horizons within 30 inches of the soil surface. "|"18273648"|"18363314"
+08/01/2016 00:00:00|"Miscellaneous notes"|"rep pedon"|"not available"|"There were 79 Pedons in NASIS for Ngedebus soil Series. However, there are lab data just for one of the 79 Pedons in NASIS. Also, the lab data is incomplete and does not support Ngedebus OSD Classification: Carbonatic, isohyperthermic Typic Udipsamments. Therefore we decide populated the TUD Marshall Islands (2016MH936005- representative) and America Samoa (2016AS630006) on NASIS and use it during this project. Now there are 81 Pedons in NASIS including the OSD."|"18273648"|"18363315"
+08/01/2016 00:00:00|"Miscellaneous notes"|"rep pedon"|"pedon description"|"USDA - NATURAL RESOURCES CONSERVATION SERVICE
+PEDON DESCRIPTION
+
+Print Date:  8/1/2016            
+Description Date:  8/1/2016            
+Describer:                                                                   
+
+User Site ID:  2016MH936005                  
+Site Note:                                                                                       
+User Pedon ID:  2016MH936005                  
+Pedon Note:                                                                                       
+
+Soil Name as Described/Sampled:                                                              
+Taxon Kind as Sampled:                            
+Sampled as Classification:                                                                                                 
+
+Soil Name as Correlated:  Ngedebus                                                    
+Taxon Kind as Correlated:   series                   
+Correlated Classification:  Carbonatic, isohyperthermic Typic Udipsamments                                                 
+
+Pedon Type:   TUD pedon                                         
+Pedon Purpose:   soil survey inventory                             
+Associated Soils:                                                                                       
+Lab Source ID:                 Lab Pedon #:              
+
+Location Information:
+  Country:                                 
+  State:   Marshall Islands    
+  County:                                 
+  MLRA:   196 -- Coral Atolls of Micronesia                                                         
+  Soil Survey Area:   2-KEA -- Kealakekua, Hawaii                                                
+                      MH936 -- Islands of Airik, Arno, Majuro, Mili and Taroa, Republic of the   
+                      Marshall Islands                                                           
+     Map Unit:   7 -- Urban land-Ngedebus complex                                                     
+  Quad Name:                                                    
+
+  Location Description:  Typical pedon of Ngedebus loamy sand, in an area where the slope is 2 percent and    
+                         the vegetation is a forest of coconut palms; Malel Island, Arno Atoll; latitude 7    
+                         degrees 04 minutes 40 seconds N. and longitude 171 degrees 51 minutes 50 seconds E.  
+  Legal Description:                                                                                        
+
+  Latitude:    7 degrees  4 minutes 40.00 seconds north
+  Longitude:   171 degrees 51 minutes 50.00 seconds east 
+  Datum:            
+  UTM Zone:           
+  UTM Easting:                  
+  UTM Northing:                  
+
+Physiographic Division:                                                     
+Physiographic Province:                                                     
+Physiographic Section:                                                      
+State Physiographic Area:                                                     
+Local Physiographic Area:   Male Island                                       
+
+Geomorphic Setting:  on tread of atoll                                                                    
+                     on tread of beach                                                                    
+                     on tread of beach terrace                                                            
+Upslope Shape:  linear                           Cross Slope Shape:  linear    
+
+Primary Earth Cover:     Tree cover                         
+Secondary Earth Cover:   Tropical                           
+Plant Association Name:                                               
+Existing Vegetation:                                                                                          
+
+Parent Material:   marine deposits derived from coral limestone                                         
+
+Bedrock Data:
+_________________________________________________________________________________________________________________
+| Vertical | Depth |        Kind        |      Hardness      |  Fracture Interval |      Geologic Formation      |
+|   Order  | to Top|                    |                    |                    |                              |
+|          | (cm.) |                    |                    |                    |                              |
+|__________|_______|____________________|____________________|____________________|______________________________|
+|          |       |                    |                    |                    |                              |
+|__________|_______|____________________|____________________|____________________|______________________________|
+
+Surface Fragments:                                                                                       
+
+Particle Size Control Section:                            
+
+Diagnostic Features:                             to  cm.            
+_______________________________________________________________________________________
+|           |           |                                        |                    |
+|    Top    |   Bottom  |               Restriction              |     Restriction    |
+| Depth (cm)| Depth (cm)|                  Kind                  |      Hardness      |
+|___________|___________|________________________________________|____________________|
+|           |           |                                        |                    |
+|___________|___________|________________________________________|____________________|
+
+
+__________________________________________________________________________________________________________
+|       |           |        |      |      |      |     |           |                  |        |        |
+| Slope | Elevation | Aspect | MAAT | MSAT | MWAT | MAP |   Frost-  |     Drainage     |  Slope | Upslope|
+|       |           |        |      |      |      |     | Free Days |       Class      | Length | Length |
+|  (%)  |  (meters) |  (deg) |  (C) |  (C) |  (C) | (mm)|           |                  |(meters)|(meters)|
+|_______|___________|________|______|______|______|_____|___________|__________________|________|________|
+|       |           |        |      |      |      |     |           |                  |        |        |
+|  1.0  |    2.0    |        | 27.0 |      |      |3,500|    365    |     somewhat     |        |        |
+|       |           |        |      |      |      |     |           |    excessively   |        |        |
+|_______|___________|________|______|______|______|_____|___________|__________________|________|________|
+
+
+A--0 to 23 centimeters; grayish brown (10YR 5/2) loamy sand; 85 percent sand; 9 percent silt; 9     
+percent clay; structureless single grain structure; very friable, nonsticky, nonplastic; common     
+fine roots throughout and common medium roots throughout and common coarse roots throughout;  and   
+many fine interstitial pores;  nonflat subangular indurated 2- to 74-millimeter coral limestone     
+fragments; strong effervescence; moderately alkaline, pH 8.0, Unspecified; ; abrupt wavy boundary.  
+
+AC--23 to 45 centimeters; light gray (10YR 7/2) sand; 90 percent sand; 6 percent silt; 6 percent    
+clay; structureless single grain structure; loose, nonsticky, nonplastic; common fine roots         
+throughout and common coarse roots throughout; many fine interstitial pores; strong effervescence;  
+moderately alkaline, pH 8.0, Unspecified; ; abrupt wavy boundary.                                   
+
+2C1--45 to 75 centimeters; pinkish white (7.5YR 8/2) coarse sand; 90 percent sand; 6 percent silt;  
+1 percent clay; structureless single grain structure; loose, nonsticky, nonplastic; many fine       
+interstitial pores; 20 percent nonflat subangular indurated 5- to 40-millimeter limestone           
+fragments; strong effervescence; moderately alkaline, pH 8.2, Unspecified; ; gradual smooth         
+boundary.                                                                                           
+
+2C2--75 to 150 centimeters; pink (7.5YR 8/4) coarse sand; 90 percent sand; 6 percent silt; 1        
+percent clay; structureless single grain structure; loose, nonsticky, nonplastic; 5 percent nonflat 
+subangular indurated 76- to 249-millimeter coral limestone fragments and 20 percent nonflat         
+subangular indurated 5- to 75-millimeter coral limestone fragments; moderately alkaline, pH 8.2,    
+Unspecified; .                                                                                      
+"|"18273648"|"18363316"
+01/20/2017 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major soil components.  The Beaches soil is a minor component."|"18273649"|"18363317"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major soil components.  The Water is a miscellaneous area."|"18273622"|"18363277"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major soil components.  The Dumps is a miscellaneous area."|"18273616"|"18363269"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273646"|"18363311"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273646"|"18363312"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273645"|"18363310"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Beaches soil is a minor component."|"18273644"|"18363309"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Majuro soil is a minor component."|"18273643"|"18363308"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273642"|"18363306"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"The Ngedebus, loamy sand component makes up 80 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on the lagoonside of atolls on islands. The parent material consists of water- and wind-deposited coralline sand. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is low.  Shrink-swell potential is low. This soil is rarely flooded. It is not ponded. There is no zone of water saturation within a depth of 72 inches. Organic matter content in the surface horizon is about 13 percent.  Nonirrigated land capability classification is 3s.  This soil does not meet hydric criteria.  There are no saline horizons within 30 inches of the soil surface. "|"18273642"|"18363307"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Majuro soil is a minor component."|"18273641"|"18363305"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Beaches soil is a minor component."|"18273640"|"18363304"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273639"|"18363302"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273639"|"18363303"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major soil components.  The Rubble land is a miscellaneous area."|"18273638"|"18363300"
+08/08/2010 00:00:00|"Edit notes"|||"removed component restriction; no indication in map unit description of a restrictive layer"|"18273638"|"18363301"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"The Ngedebus, very gravelly loamy sand component makes up 9 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on the lagoonside of atolls on islands. The parent material consists of water- and wind-deposited coralline sand. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is low.  Shrink-swell potential is low. This soil is occasionally flooded. It is not ponded. A seasonal zone of water saturation is at 42 inches during January, February, March, April, May, June, July, August, September, October, November, December. Organic matter content in the surface horizon is about 2 percent.    This soil does not meet hydric criteria.  There are no saline horizons within 30 inches of the soil surface. "|"18273637"|"18363299"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Beaches soil is a minor component."|"18273636"|"18363298"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"The Majuro, very cobbly loamy sand component makes up 75 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on oceanside of atolls on islands. The parent material consists of water- and wind-deposited coralline rubble and sand. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is very low. Shrink-swell potential is low. This soil is occasionally flooded. It is not ponded. There is no zone of water saturation within a depth of 72 inches. Organic matter content in the surface horizon is about 2 percent.    This soil does not meet hydric criteria.  There are no saline horizons within 30 inches of the soil surface. "|"18273635"|"18363297"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Rubble land soil is a minor component."|"18273634"|"18363295"
+08/08/2010 00:00:00|"Edit notes"|||"removed component restriction; no indication in map unit description of a restrictive layer"|"18273634"|"18363296"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273633"|"18363294"
+09/23/2014 00:00:00|"Nontechnical description"|"GENSOIL"|"generated"|"Generated brief soil descriptions are created for major components.  The Ngedebus soil is a minor component."|"18273632"|"18363292"
+02/14/2006 00:00:00|"Miscellaneous notes"|"GENSOIL"|"generated"|"The NGEDEBUS component makes up 85 percent of the map unit.    The depth to restrictive layer is greater than 80 inches. It is somewhat excessively drained. The slowest water movement of the soil material is rapid. Available water capacity is low and shrink swell potential is low. This soil is rarely flooded and is not ponded. The water table is deeper than 6 feet.  There are no saline horizons within 30 inches of the soil surface. There are no sodic horizons within 30 inches of the soil surface.  It is in nonirrigated land capability class 3s."|"18273632"|"18363293"

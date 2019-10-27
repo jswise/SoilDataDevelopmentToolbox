@@ -1,0 +1,7 @@
+"County or Parish"|"MH040"|"Arno"|388|"14205"|"416913"
+"County or Parish"|"MH030"|"Ailuk"|206|"14205"|"416914"
+"County or Parish"|"MH190"|"Majuro"|2200|"14205"|"416915"
+"County or Parish"|"MH385"|"Toke"|388|"14205"|"416916"
+"County or Parish"|"MH320"|"Mili"|699|"14205"|"416917"
+"MLRA"|"196"|"Coral Atolls of Micronesia"|3881|"14205"|"416918"
+"State or Territory"|"MH"|"Marshall Islands"|3881|"14205"|"416919"

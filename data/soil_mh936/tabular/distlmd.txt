@@ -1,0 +1,15 @@
+"Non-MLRA Soil Survey Area"|"MH936"|"Islands of Airik, Arno, Majuro, Mili and Taroa, Republic of the Marshall Islands"||07/01/1987 00:00:00|"certified, major components"|09/07/2019 03:30:49|" The SSS certified the data population for all map units, and concurred with correlation of all projects mentioned, as they were documented in Soil Survey Area Legend(s) and in the Project Correlation table.
+
+This dataset also contains the following changes:
+
+A. All spatial data was processed and refreshed to reduce geometry size and coordinate precision of SSURGO, and to standardize the vertice density of our surveys. It is estimated that this reduced the geometry size of SSURGO to around 10 GB. This is an over 50% reduction in size, and will therefore greatly optimize our data for future usage and efficiency in publishing and interacting with it, at all levels.
+
+B. The five national interpretations listed below are new and revised:
+
+    FOR - Windthrow Hazard (New for FY20)
+    FOR - Mechanical Planting Suitability
+    FOR - Mechanical Site Preparation (Deep)
+    FOR - Mechanical Site Preparation (Surface)
+    FOR - Potential Erosion Hazard (Off-Road/Off-Trail)
+
+C. Recalculated all national and local interpretations for all components."|"14205"|"65391"|"65293"

@@ -1,0 +1,766 @@
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Evaluation of map unit interpretations (subcategory interpretation).
+
+Address the interpretation issues within the survey manuscript. 
+Agriculture interpretations
+
+Identify interpretation join issues of similar map units across survey boundaries.
+MLRA MU Needed
+
+"|"465580"|"2068360"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+yes
+
+Do lines correctly separate map units in the soil landform? 
+yes 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+Possibly, man-made wet organic soils may exist in small areas. If so these will most likely be the Odesangel and Ngerungor. (Point MUs may be appropriate for these soils) 
+
+Are dissimilar soils consistent with the map unit description? 
+Yes, excavated taro pits can be constructed anywhere. 
+
+Is the intensity of mapping suitable for the land use? 
+yes
+
+Does the series concept, as correlated, fit the map unit concept? 
+yes
+
+How was the mapping evaluated? 
+Knowledge of similar landscapes in other survey areas and limited onsite observations
+
+User comments?  
+As above
+
+Number of: transects: 
+Unknown 
+
+field notes: : 
+Unknown 
+
+descriptions : 
+Unknown 
+
+remapping:  In digitizing soil lines were replicated as closely as possible to the published hard copy maps. Remapping might be needed; lines were probably drawn broadly and generally  
+Or road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+Does not apply, a MLRA MU needs to be set up.
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+Yes
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+Yes, but probably a lot more swamps symbols that can be identified with symbols or point MUs. Cultural spot symbols (Schools, Churches)  may no longer be accurate. 
+
+Will this map unit require extensive revision (remapping)? 
+No extensive revision but the original mapping was at 1:8000 and the lines seem to be drawn generally. Field checking should be done for a more accurate line placement.  
+
+
+"|"465580"|"2068361"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+Consider developing a MLRA MU. (See PB935 for Possible candidate)
+
+Do map unit names correspond with current NCSS and editorial standards?
+ yes
+
+Is the unit adequately described? If not, what is inadequate? 
+ yes
+
+Does the map unit design meet current user needs within the MLRA? 
+yes
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+Field work needs to confirm if Odesangel and/or Ngerungor exist in this MU
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+Yes
+
+Major uses of the map unit at the time it was correlated?
+Atoll forest, coconut plantation, agroforestry, homesites.
+
+Major uses of the map unit in the current condition? 
+Atoll forest, coconut plantation, agroforestry, fuelwood, recreation, homesites.
+
+Are soil properties consistent with the needs of the current land use? 
+Yes 
+
+Are soil property entries to the NASIS database complete? 
+Yes, but inaccurate more data could improve accuracy. 
+
+"|"465580"|"2068362"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465580"|"2068388"
+05/05/2010 00:00:00|"Edit notes"|"maintenance"|"Guam Detail"|"Changed component name capitalization, added local phases, geomorphic description, consistence, parent material, "|"465580"|"2068389"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Address the interpretation issues within the survey manuscript.
+
+Identify interpretation join issues of similar map units across survey boundaries.
+"|"465581"|"2068363"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+Are soil property entries to the NASIS database complete? 
+
+
+"|"465581"|"2068364"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+
+Do lines correctly separate map units in the soil landform? 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+
+Are dissimilar soils consistent with the map unit description? 
+
+Is the intensity of mapping suitable for the land use? 
+
+Does the series concept, as correlated, fit the map unit concept? 
+
+How was the mapping evaluated? 
+
+User comments? 
+
+Number of: transects ________ 
+
+field notes ________ 
+
+descriptions ________ 
+
+remapping ________ 
+
+or 
+
+road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+
+Will this map unit require extensive revision (remapping)? 
+"|"465581"|"2068365"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465581"|"2068390"
+05/05/2010 00:00:00|"Edit notes"|"maintenance"|"Guam Detail"|"Changed component name capitalization, added local phases, geomorphic description, consistence, parent material, "|"465581"|"2068391"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Address the interpretation issues within the survey manuscript.
+
+Identify interpretation join issues of similar map units across survey boundaries.
+"|"465582"|"2068366"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+
+Do lines correctly separate map units in the soil landform? 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+
+Are dissimilar soils consistent with the map unit description? 
+
+Is the intensity of mapping suitable for the land use? 
+
+Does the series concept, as correlated, fit the map unit concept? 
+
+How was the mapping evaluated? 
+
+User comments? 
+
+Number of: transects ________ 
+
+field notes ________ 
+
+descriptions ________ 
+
+remapping ________ 
+
+or 
+
+road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+
+Will this map unit require extensive revision (remapping)? 
+"|"465582"|"2068367"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+Are soil property entries to the NASIS database complete? 
+
+
+"|"465582"|"2068368"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465582"|"2068392"
+05/05/2010 00:00:00|"Edit notes"|"maintenance"|"Guam Detail"|"Changed component name capitalization, added local phases, geomorphic description, consistence, parent material, "|"465582"|"2068393"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Address the interpretation issues within the survey manuscript.
+
+Identify interpretation join issues of similar map units across survey boundaries.
+"|"465583"|"2068369"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+
+Do lines correctly separate map units in the soil landform? 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+
+Are dissimilar soils consistent with the map unit description? 
+
+Is the intensity of mapping suitable for the land use? 
+
+Does the series concept, as correlated, fit the map unit concept? 
+
+How was the mapping evaluated? 
+
+User comments? 
+
+Number of: transects ________ 
+
+field notes ________ 
+
+descriptions ________ 
+
+remapping ________ 
+
+or 
+
+road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+
+Will this map unit require extensive revision (remapping)? 
+"|"465583"|"2068370"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+Are soil property entries to the NASIS database complete? 
+
+
+"|"465583"|"2068371"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465583"|"2068394"
+05/05/2010 00:00:00|"Edit notes"|"maintenance"|"Guam Detail"|"Changed component name capitalization, added local phases, geomorphic description, consistence, parent material, "|"465583"|"2068395"
+05/03/2010 00:00:00|"Correlation notes"|"Component"|"Terric Haplohemists"|"The Terric Haplohemists are the Odesangel Soil Series (formerly Ngerungor Variant)"|"465583"|"2068396"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Address the interpretation issues within the survey manuscript.
+
+Identify interpretation join issues of similar map units across survey boundaries.
+"|"465584"|"2068372"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+
+Do lines correctly separate map units in the soil landform? 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+
+Are dissimilar soils consistent with the map unit description? 
+
+Is the intensity of mapping suitable for the land use? 
+
+Does the series concept, as correlated, fit the map unit concept? 
+
+How was the mapping evaluated? 
+
+User comments? 
+
+Number of: transects ________ 
+
+field notes ________ 
+
+descriptions ________ 
+
+remapping ________ 
+
+or 
+
+road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+
+Will this map unit require extensive revision (remapping)? 
+"|"465584"|"2068373"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+Are soil property entries to the NASIS database complete? 
+
+
+"|"465584"|"2068374"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465584"|"2068397"
+05/05/2010 00:00:00|"Edit notes"|"maintenance"|"Guam Detail"|"Changed component name capitalization, added local phases, geomorphic description, consistence, parent material, "|"465584"|"2068398"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Address the interpretation issues within the survey manuscript.
+
+Identify interpretation join issues of similar map units across survey boundaries.
+"|"465585"|"2068375"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+
+Do lines correctly separate map units in the soil landform? 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+
+Are dissimilar soils consistent with the map unit description? 
+
+Is the intensity of mapping suitable for the land use? 
+
+Does the series concept, as correlated, fit the map unit concept? 
+
+How was the mapping evaluated? 
+
+User comments? 
+
+Number of: transects ________ 
+
+field notes ________ 
+
+descriptions ________ 
+
+remapping ________ 
+
+or 
+
+road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+
+Will this map unit require extensive revision (remapping)? 
+"|"465585"|"2068376"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+Are soil property entries to the NASIS database complete? 
+
+
+"|"465585"|"2068377"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465585"|"2068399"
+05/05/2010 00:00:00|"Edit notes"|"maintenance"|"Guam Detail"|"Changed component name capitalization, added local phases, geomorphic description, consistence, parent material, "|"465585"|"2068400"
+05/03/2010 00:00:00|"Correlation notes"|"Component"|"Terric Haplohemists"|"The Terric Haplohemists are the Odesangel Soil Series (formerly Ngerungor Variant)"|"465585"|"2068401"
+07/26/2016 00:00:00|"Miscellaneous notes"|"evaluation"|"additional note"|"MLRA 196 - Urban land-Ngedebus complex
+
+This map unit covers 949 acres. The map unit was originally mapped as Urban land-Ngedebus complex in  Republic of Marshal Islands. The map unit is mapped in MLRA 196 Coral Atolls of Micronesia
+
+A review of series concepts in the manuscripts was compared to the most current OSD. The TUD description from Island of  Marshal Islands are the same as the OSD. However, both have different taxonomic classification (OSD classification: Carbonatic, isohyperthermic Typic Udipsamments; TUD Carbonatic, isohyperthermic Typic tropopsamments). The OSD classification was evaluated with the current version of Key of taxonomy and no updates are needed.
+
+In the OSD, the current typical description and typical pedon for Ngedebus were set up in the Island of Palau, Republic of Palau according to the manuscript from 1982.  However, the TUD description and location from the new Palau Island manuscript, 2011, is not the same as the OSD.  The concepts, pedon description and the taxonomy classification for this series is totally different compared with the Ngedebus OSD. The OSD is an Entisol while the 2011 manuscript describes a Mollisol. At this time we are not going to make any changes to the taxonomy until we get additional pedon descriptions and lab data.  
+
+
+"|"465586"|"2068378"
+07/26/2016 00:00:00|"Map unit description"|"map unit concept"||"Map Unit Concept: 
+MLRA 196 - Urban land - Ngedebus complex, 0 to 2 percent slopes
+
+Introduction
+
+This map unit is formed in sandy marine deposits derived from coral sand.  This map unit consist of very deep, somewhat excessively drained. The mean annual rainfall ranges from 118 to 138 inches (3000 to 3500 millimeters) and the mean annual air temperature ranges from 75 to 81 degrees F (24 to 27 degrees C) .Elevation ranges from 0 to 10 feet (0 to 3 meters).
+
+This map unit is composed of two major components which are Urban land and Ngedebus. The Urban land is a miscellaneous area.The Ngedebus, loamy sand component makes up 40 percent of the map unit. Slopes are 0 to 2 percent. This component is on generally on the lagoonside of atolls on islands. The parent material consists of sandy marine deposits derived from coral limestone. Depth to a root restrictive layer is greater than 60 inches. The natural drainage class is somewhat excessively drained.  Water movement in the most restrictive layer is high. Available water to a depth of 60 inches (or restricted depth) is low.  Shrink-swell potential is low. This soil is occasionally flooded. It is not ponded. A seasonal zone of water saturation is at 0 inches during January, February, March, April, May, June, July, August, September, October, November, December. Organic matter content in the surface horizon is about 2 percent.  Nonirrigated land capability classification is 4s.  This soil does not meet hydric criteria. The calcium carbonate equivalent within 40 inches, typically, does not exceed 40 percent. There are no saline horizons within 30 inches of the soil surface. 
+
+
+Geomorphic Description
+Landscape: Islands
+Landform:  Atolls (representative); beaches, beach terraces and coastal plains
+ 
+Spatial Distribution
+This map unit covers 1439 acres. The map unit was originally mapped as Urban land-Ngedebus complex in Republic of  Marshal Islands. The map unit is mapped in MLRA 196 Coral Atolls of Micronesia.
+
+Minor Components
+No minor components were assigned to this particular map unit because field data collected did not identify any minor components on the particular landform and map unit.
+
+Plan 
+
+The SDJR - MLRA 196 - Urban land-Ngedebus complex, 0 to 2 percent slopes , will create 1 new national mapunit symbol, 1 new map unit and 1 new data map unit for Urban land-Ngedebus complex from 2 different national mapunit symbols. The table below summarizes the map units and survey areas for the 2016 SDJR project. 
+
+Mapunit Name	             Area Symbol	Area Name	                                                                       Mapunit Symbol	National Mapunit Symbol	     DMU Description
+Urban land-Ngedebus complex	 AS630	        American Samoa, Islands of Aunuu, Ofu, Olosega, Tau, and Tutuila	                   35	           hm9m	                     630035
+Urban land-Ngedebus complex	 MH936	        Islands of Airik, Arno, Majuro, Mili, and Taroa, Republic of the Marshall Islands	   7	           hmgx	                     936007
+
+Future Project
+
+Minor Components
+No minor components were assigned to this particular map unit because field data collected did not identify any minor components on the particular landform and map unit. Therefore, we recommended to create a SDJR future project to compile the MU composition across the entire MLRA 196 and update the MLRA MU and DMU.
+
+OSD Type Location
+The current type location for Ngedebus series is set on Island of Palau, Republic of Palau. However, based on ArcMap evaluation this Series is located in the ocean. The current location needs to be reviewed and relocated.
+
+OSD Typical Pedon 
+The Ngedebus pedon description from the current OSD is the same of the TUD from Islands of Palau. The TUD descriptions came from the old Palau manuscript from 1982.  The current manuscript of Palau Island from 2011 have different the Pedon description and taxonomy classification for Ngedebus. Therefore, we support a future project to address those issues.
+
+Major Component classification 
+A review of series concepts in the manuscripts was compared to the most current OSD. The TUD from Island of Palau on 1983 is the same as the OSD. However, there is a new manuscript for Palau Island and the TUD is different to the OSD. Either TUD , from 1983 and 2011 have  different taxonomic classification (OSD classification: Carbonatic, isohyperthermic Typic Udipsamments; TUD 1983: Carbonatic, isohyperthermic Typic tropopsamments; TUD 2011 Sandy, Carbonatic, isohyperthermic Typic  Haprendolls). We are using the current soil Key of taxonomy to update the taxonomic classification. However, we are lack of documentation and data for this component. Therefore we support a future project to perform soil samples in order to collect additional profile descriptions and lab data that would help to address those issues.
+
+
+Lab data 
+There are 79 Pedons in NASIS for Ngedebus soil Series. However, there are lab data just for one of the 79 Pedons in NASIS. Also, the lab data is incomplete and does not support Ngedebus OSD Classification: Carbonatic, isohyperthermic Typic Udipsamment.
+
+Climate data
+There is a lack of Climate data (temperature and precipitation) for Pacific Basin. In order to get more climate data we need to contact /request data to different sources like federal, state agencies and university. No field work is needed to accomplish this project.
+
+Land category
+There is limited information available to calculate the land category on the pacific islands. We need to contact different source in order to get the information needed. No field work is needed to accomplish this project.
+
+Ecological Site 
+There is no Ecological Site information. Therefore we have recommended that a future project should be carry out to determine an Ecological Site ID, name and group across the MLRA 196."|"465586"|"2068379"
+12/13/2000 00:00:00|"Correlation notes"|"amendment"||"12/14/2000  Map unit 8 for Water was added in accordance to NSSH Sec. 647 because there was no map unit to accomodate water delineations."|"465587"|"2068384"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+
+Do lines correctly separate map units in the soil landform? 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+
+Are dissimilar soils consistent with the map unit description? 
+
+Is the intensity of mapping suitable for the land use? 
+
+Does the series concept, as correlated, fit the map unit concept? 
+
+How was the mapping evaluated? 
+
+User comments? 
+
+Number of: transects ________ 
+
+field notes ________ 
+
+descriptions ________ 
+
+remapping ________ 
+
+or 
+
+road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+
+Will this map unit require extensive revision (remapping)? 
+"|"465587"|"2068385"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+Are soil property entries to the NASIS database complete? 
+
+
+"|"465587"|"2068386"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Address the interpretation issues within the survey manuscript.
+
+Identify interpretation join issues of similar map units across survey boundaries.
+"|"465587"|"2068387"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465587"|"2068403"
+12/13/2000 00:00:00|"Correlation notes"|"amendment"||"12/14/2000  Map unit 9 for Landfill was added in accordance to NSSH Sec. 647 because there was no map unit to account for this delineation."|"465588"|"2068380"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"interpretations"|"Address the interpretation issues within the survey manuscript.
+
+Identify interpretation join issues of similar map units across survey boundaries.
+"|"465588"|"2068381"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+Are soil property entries to the NASIS database complete? 
+
+
+"|"465588"|"2068382"
+05/04/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"spatial"|"Do soil lines fit major landform breaks? 
+
+Do lines correctly separate map units in the soil landform? 
+
+Is there a need to create new map units to delineate dissimilar soils? 
+
+Are dissimilar soils consistent with the map unit description? 
+
+Is the intensity of mapping suitable for the land use? 
+
+Does the series concept, as correlated, fit the map unit concept? 
+
+How was the mapping evaluated? 
+
+User comments? 
+
+Number of: transects ________ 
+
+field notes ________ 
+
+descriptions ________ 
+
+remapping ________ 
+
+or 
+
+road checking line placement ________
+
+Is there an exact join with surrounding surveys? 
+
+Is soil mapping consistently applied to landscapes across the major land resource area? 
+
+Does the use of features and symbols reflect current definitions and use standards on the Feature and Symbol Legend for Soil Survey, NRCS-SOI-37A? 
+
+Will this map unit require extensive revision (remapping)? 
+"|"465588"|"2068383"
+05/05/2010 00:00:00|"Miscellaneous notes"|"evaluation"|"attribute"|"Probable map unit name if re-correlated. 
+
+Do map unit names correspond with current NCSS and editorial standards? 
+
+Is the unit adequately described? If not, what is inadequate? 
+
+Does the map unit design meet current user needs within the MLRA? 
+
+Are limiting dissimilar soils named as minor map unit components in NASIS? 
+
+Is the amount and type of minor components consistent with NSSH guidelines? 
+
+Major uses of the map unit at the time it was correlated?
+
+Major uses of the map unit in the current condition? 
+
+Are soil properties consistent with the needs of the current land use? 
+
+
+Are soil property entries to the NASIS database complete? 
+"|"465588"|"2068402"
