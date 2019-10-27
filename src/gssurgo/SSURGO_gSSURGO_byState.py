@@ -558,6 +558,129 @@ def ClipMuPolygons(targetLayer, aoiLayer, outputClip, theTile):
         errorMsg()
 
 
+## ===================================================================================
+def create_gssurgo(inputFolder, outputFolder, theTileValues, bOverwriteOutput, bRequired, useTextFiles, aoiLayer, aoiField):
+    #import SSURGO_MergeSoilShapefilesbyAreasymbol_GDB
+    import gssurgo.SSURGO_Convert_to_Geodatabase
+
+    # Get dictionary containing 'state abbreviations'
+    stDict = StateNames()
+
+    # Get dictionary containing the geographic region for each state
+    dAOI = StateAOI()
+
+    # Target attribute. Note that is this case it is lowercase. Thought it was uppercase for SAVEREST?
+    # Used for XML parser
+    attName = "areasymbol"
+
+    # Track success or failure for each exported geodatabase
+    goodExports = list()
+    badExports = list()
+
+    for theTile in theTileValues:
+        stAbbrev = stDict[theTile]
+        tileInfo = (stAbbrev, theTile)
+
+        PrintMsg(" \n***************************************************************", 0)
+        PrintMsg("Processing state: " + theTile, 0)
+        PrintMsg("***************************************************************", 0)
+
+        if not arcpy.Exists(inputFolder):
+            raise MyError("Unable to connect to folder containing SSURGO downloads (" + inputFolder + ")")
+
+        # Get list of AREASYMBOLs for this state tile from LAOVERLAP table in Soil Data Mart DB
+        if theTile == "Puerto Rico and U.S. Virgin Islands":
+            valList = GetAreasymbols(attName, "Puerto Rico")
+            valList = valList + GetAreasymbols(attName, "Virgin Islands")
+
+        else:
+            valList = GetAreasymbols(attName, theTile)
+
+        if len(valList) == 0:
+            raise MyError("Soil Data Access web service failed to retrieve list of areasymbols for " + theTile)
+
+        # If the state tile is "Pacific Basin", remove the Areasymbol for "American Samoa"
+        # from the list. American Samoa will not be grouped with the rest of the PAC Basin
+        if theTile == "Pacific Basin":
+            #PrintMsg(" \nRemoving  areasymbol for American Samoa", 1)
+            rmVal = GetAreasymbols(attName, "American Samoa")[0]
+            PrintMsg(" \nAreaSymbol for American Samoa: " + rmVal, 1)
+
+            if rmVal in valList:
+                valList.remove(rmVal)
+
+        # PrintMsg(" \nFinal Areasymbol List: " + ", ".join(valList), 0)
+
+        # Get the AOI for this state. This is needed later to set the correct XML and coordinate system
+        theAOI = dAOI[theTile]
+
+        # Get list of matching folders containing SSURGO downloads
+        surveyList = GetFolders(inputFolder, valList, bRequired, theTile)
+        valList = list() # empty list or the spatial sort won't get used later on
+
+        if len(surveyList) > 0:
+
+            # Set path and name of Geodatabase for this state tile
+            outputWS = os.path.join(outputFolder, "gSSURGO_" + stAbbrev + ".gdb")
+
+            if arcpy.Exists(outputWS):
+                if bOverwriteOutput:
+                    PrintMsg(" \nRemoving existing geodatabase for " + theTile, 0)
+                    try:
+                        arcpy.Delete_management(outputWS)
+                        time.sleep(1)
+                        
+                    except:
+                        pass
+
+                    if arcpy.Exists(outputWS):
+                        # Failed to delete existing geodatabase
+                        raise MyError("Unable to delete existing database: " + outputWS)
+
+            # Call SDM Export script
+            # 12-25-2013 try passing more info through the stAbbrev parameter
+            #
+            # PrintMsg(" \nPassing list of survey areas to 'SSURGO_Convert_to_Geodatabase' script: " + ", ".join(surveyList), 1)
+            bExported = gssurgo.SSURGO_Convert_to_Geodatabase.gSSURGO(inputFolder, surveyList, outputWS, theAOI, tileInfo, useTextFiles, False, valList)
+
+            if bExported == False:
+                PrintMsg("\tAdding " + theTile + " to list if failed conversions", 0)
+                badExports.append(theTile)
+                err = "Passed - Export failed for " + theTile
+
+            else:
+                # Successful export of the current tile
+                #PrintMsg("\tAdding " + theTile + " to good list", 0)
+
+                # Perhaps add the state-clip here???
+                #
+                if aoiLayer and aoiField and not theTile in ['Pacific Basin', 'Puerto Rico and U.S. Virgin Islands', 'Northern Mariana Islands', 'Federated States of Micronesia', 'Guam','Hawaii']:
+                    # Apply selection to AOI layer
+                    sql = "UPPER(" + aoiField + ") = '" + theTile.upper() + "'"
+                    arcpy.SelectLayerByAttribute_management(aoiLayer, "NEW_SELECTION", sql)
+                    ClipMuPolygons(os.path.join(outputWS, "MUPOLYGON"), aoiLayer, os.path.join(outputWS, "MUPOLYGON_" + stAbbrev), theTile)
+
+                # End of state clip
+
+                goodExports.append(theTile)
+
+        else:
+            # Failed to find any SSURGO downloads for this tile
+            #PrintMsg("None of the input surveys (" + ", ".join(valList) + ") were found for " + theTile, 2)
+            badExports.append(theTile)
+
+        # end of tile for loop
+
+    PrintMsg(" \n" + (60 * "*"), 0)
+    PrintMsg(" \n" + (60 * "*"), 0)
+    PrintMsg("\nFinshed state exports", 0)
+
+    if len(goodExports) > 0:
+        PrintMsg(" \nSuccessfully created geodatabases for the following areas: " + ", ".join(goodExports) + " \n ", 0)
+
+    if len(badExports) > 0:
+        PrintMsg("Failed to create geodatabases for the following areas: " + ", ".join(badExports) + " \n ", 2)
+
 
 ## ===================================================================================
 ## ===================================================================================
@@ -570,138 +693,17 @@ from arcpy import env
 
 if __name__ == '__main__':
 
-    # Create the Geoprocessor object
+    inputFolder = arcpy.GetParameterAsText(0)      # Change this to the SSURGO Download folder (inputFolder)
+    outputFolder = arcpy.GetParameterAsText(1)     # output folder to contain new geodatabases
+    theTileValues = arcpy.GetParameter(2)          # list of state names
+    bOverwriteOutput = arcpy.GetParameter(3)       # overwrite existing geodatabases
+    bRequired = arcpy.GetParameter(4)              # require that all available SSURGO be present in the input folder
+    useTextFiles = arcpy.GetParameter(5)           # checked: use text files for attributes; unchecked: use Access database for attributes
+    aoiLayer = arcpy.GetParameterAsText(6)         # optional state layer used for clipping
+    aoiField = arcpy.GetParameterAsText(7)         # optional state name field used to query for AOI
+
     try:
-        inputFolder = arcpy.GetParameterAsText(0)      # Change this to the SSURGO Download folder (inputFolder)
-        outputFolder = arcpy.GetParameterAsText(1)     # output folder to contain new geodatabases
-        theTileValues = arcpy.GetParameter(2)          # list of state names
-        bOverwriteOutput = arcpy.GetParameter(3)       # overwrite existing geodatabases
-        bRequired = arcpy.GetParameter(4)              # require that all available SSURGO be present in the input folder
-        useTextFiles = arcpy.GetParameter(5)           # checked: use text files for attributes; unchecked: use Access database for attributes
-        aoiLayer = arcpy.GetParameterAsText(6)         # optional state layer used for clipping
-        aoiField = arcpy.GetParameterAsText(7)         # optional state name field used to query for AOI
-
-
-        #import SSURGO_MergeSoilShapefilesbyAreasymbol_GDB
-        import SSURGO_Convert_to_Geodatabase
-
-        # Get dictionary containing 'state abbreviations'
-        stDict = StateNames()
-
-        # Get dictionary containing the geographic region for each state
-        dAOI = StateAOI()
-
-        # Target attribute. Note that is this case it is lowercase. Thought it was uppercase for SAVEREST?
-        # Used for XML parser
-        attName = "areasymbol"
-
-        # Track success or failure for each exported geodatabase
-        goodExports = list()
-        badExports = list()
-
-        for theTile in theTileValues:
-            stAbbrev = stDict[theTile]
-            tileInfo = (stAbbrev, theTile)
-
-            PrintMsg(" \n***************************************************************", 0)
-            PrintMsg("Processing state: " + theTile, 0)
-            PrintMsg("***************************************************************", 0)
-
-            if not arcpy.Exists(inputFolder):
-                raise MyError("Unable to connect to folder containing SSURGO downloads (" + inputFolder + ")")
-
-            # Get list of AREASYMBOLs for this state tile from LAOVERLAP table in Soil Data Mart DB
-            if theTile == "Puerto Rico and U.S. Virgin Islands":
-                valList = GetAreasymbols(attName, "Puerto Rico")
-                valList = valList + GetAreasymbols(attName, "Virgin Islands")
-
-            else:
-                valList = GetAreasymbols(attName, theTile)
-
-            if len(valList) == 0:
-                raise MyError("Soil Data Access web service failed to retrieve list of areasymbols for " + theTile)
-
-            # If the state tile is "Pacific Basin", remove the Areasymbol for "American Samoa"
-            # from the list. American Samoa will not be grouped with the rest of the PAC Basin
-            if theTile == "Pacific Basin":
-                #PrintMsg(" \nRemoving  areasymbol for American Samoa", 1)
-                rmVal = GetAreasymbols(attName, "American Samoa")[0]
-                PrintMsg(" \nAreaSymbol for American Samoa: " + rmVal, 1)
-
-                if rmVal in valList:
-                    valList.remove(rmVal)
-
-            # PrintMsg(" \nFinal Areasymbol List: " + ", ".join(valList), 0)
-
-            # Get the AOI for this state. This is needed later to set the correct XML and coordinate system
-            theAOI = dAOI[theTile]
-
-            # Get list of matching folders containing SSURGO downloads
-            surveyList = GetFolders(inputFolder, valList, bRequired, theTile)
-            valList = list() # empty list or the spatial sort won't get used later on
-
-            if len(surveyList) > 0:
-
-                # Set path and name of Geodatabase for this state tile
-                outputWS = os.path.join(outputFolder, "gSSURGO_" + stAbbrev + ".gdb")
-
-                if arcpy.Exists(outputWS):
-                    if bOverwriteOutput:
-                        PrintMsg(" \nRemoving existing geodatabase for " + theTile, 0)
-                        try:
-                            arcpy.Delete_management(outputWS)
-                            time.sleep(1)
-                            
-                        except:
-                            pass
-
-                        if arcpy.Exists(outputWS):
-                            # Failed to delete existing geodatabase
-                            raise MyError("Unable to delete existing database: " + outputWS)
-
-                # Call SDM Export script
-                # 12-25-2013 try passing more info through the stAbbrev parameter
-                #
-                # PrintMsg(" \nPassing list of survey areas to 'SSURGO_Convert_to_Geodatabase' script: " + ", ".join(surveyList), 1)
-                bExported = SSURGO_Convert_to_Geodatabase.gSSURGO(inputFolder, surveyList, outputWS, theAOI, tileInfo, useTextFiles, False, valList)
-
-                if bExported == False:
-                    PrintMsg("\tAdding " + theTile + " to list if failed conversions", 0)
-                    badExports.append(theTile)
-                    err = "Passed - Export failed for " + theTile
-
-                else:
-                    # Successful export of the current tile
-                    #PrintMsg("\tAdding " + theTile + " to good list", 0)
-
-                    # Perhaps add the state-clip here???
-                    #
-                    if aoiLayer != "" and aoiField != "" and not theTile in ['Pacific Basin', 'Puerto Rico and U.S. Virgin Islands', 'Northern Mariana Islands', 'Federated States of Micronesia', 'Guam','Hawaii']:
-                        # Apply selection to AOI layer
-                        sql = "UPPER(" + aoiField + ") = '" + theTile.upper() + "'"
-                        arcpy.SelectLayerByAttribute_management(aoiLayer, "NEW_SELECTION", sql)
-                        ClipMuPolygons(os.path.join(outputWS, "MUPOLYGON"), aoiLayer, os.path.join(outputWS, "MUPOLYGON_" + stAbbrev), theTile)
-
-                    # End of state clip
-
-                    goodExports.append(theTile)
-
-            else:
-                # Failed to find any SSURGO downloads for this tile
-                #PrintMsg("None of the input surveys (" + ", ".join(valList) + ") were found for " + theTile, 2)
-                badExports.append(theTile)
-
-            # end of tile for loop
-
-        PrintMsg(" \n" + (60 * "*"), 0)
-        PrintMsg(" \n" + (60 * "*"), 0)
-        PrintMsg("\nFinshed state exports", 0)
-
-        if len(goodExports) > 0:
-            PrintMsg(" \nSuccessfully created geodatabases for the following areas: " + ", ".join(goodExports) + " \n ", 0)
-
-        if len(badExports) > 0:
-            PrintMsg("Failed to create geodatabases for the following areas: " + ", ".join(badExports) + " \n ", 2)
+        create_gssurgo(inputFolder, outputFolder, theTileValues, bOverwriteOutput, bRequired, useTextFiles, aoiLayer, aoiField)
 
     except MyError as err:
         PrintMsg(str(err), 2)

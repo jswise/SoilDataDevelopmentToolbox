@@ -1764,7 +1764,7 @@ def GetXML(AOI):
     #
     try:
         # Set folder path for workspace document (same as script)
-        script_folder = os.path.dirname(sys.argv[0])
+        script_folder = os.path.dirname(__file__)
         xmlPath = os.path.join(script_folder, 'templates')
 
         # Changed datum transformation to use ITRF00 for ArcGIS 10.1
@@ -2075,7 +2075,7 @@ def gSSURGO(inputFolder, surveyList, outputWS, AOI, tileInfo, useTextFiles, bCli
             arcpy.management.CreateFileGDB(os.path.dirname(env.scratchGDB), os.path.basename(env.scratchGDB), "10.0") # pylint:disable=no-member
 
         # Import script to generate relationshipclasses and associated attribute indexes
-        import Create_SSURGO_RelationshipClasses
+        import gssurgo.Create_SSURGO_RelationshipClasses
         
         # get the information from the tileInfo
         if type(tileInfo) == tuple:

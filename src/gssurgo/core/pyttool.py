@@ -93,6 +93,8 @@ class PYTTool(Thing):
         for key, param in param_dict.items():
             if param.datatype == 'GPFeatureRecordSetLayer':
                 param_dict[key] = param
+            elif param.multiValue:
+                param_dict[key] = param.values
             else:
                 try:
                     val = param.value.value
