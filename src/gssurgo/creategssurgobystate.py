@@ -1,7 +1,7 @@
 from gssurgo.core.pyttool import PYTTool
 import gssurgo.SSURGO_gSSURGO_byState
 
-class CreateGSSURGOByState(PYTTool):
+class CreategSSURGOByState(PYTTool):
 
     def execute(self, parameters, messages):
         """Extract the data."""

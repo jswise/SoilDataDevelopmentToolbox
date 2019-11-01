@@ -1,3 +1,4 @@
+import distutils.sysconfig
 import os
 import site
 
@@ -35,7 +36,7 @@ class PathFile:
 
     def get_file_path(self):
         if not self.file_path:
-            site_packages = site.getusersitepackages()
+            site_packages = distutils.sysconfig.get_python_lib()
             self.file_path = os.path.join(site_packages, 'gssurgo.pth')
         return self.file_path
     

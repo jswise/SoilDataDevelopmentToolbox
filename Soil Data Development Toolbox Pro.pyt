@@ -1,11 +1,7 @@
 import os
 import sys
 
-project_root = os.path.dirname(__file__)
-src = os.path.join(project_root, 'src')
-sys.path.append(src)
-
-from gssurgo.creategssurgobystate import CreateGSSURGOByState # pylint:disable=import-error
+from gssurgo.creategssurgobystate import CreategSSURGOByState # pylint:disable=import-error
 
 class Toolbox(object):
     def __init__(self):
@@ -15,4 +11,4 @@ class Toolbox(object):
         self.alias = 'gSSURGO Tools'
         self.description = 'gSSURGO'
 
-        self.tools = [CreateGSSURGOByState]
+        self.tools = [CreategSSURGOByState]

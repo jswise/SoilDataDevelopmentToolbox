@@ -1,7 +1,7 @@
 import logging
 import pytest
 
-from gssurgo.creategssurgobystate import CreateGSSURGOByState
+from gssurgo.creategssurgobystate import CreategSSURGOByState
 
 INPUT_FOLDER = r'c:\temp\SSURGO'
 OUTPUT_FOLDER = r'c:\temp\ssurgo3'
@@ -9,7 +9,7 @@ STATES = ['Marshall Islands']
 
 @pytest.fixture
 def victim():
-    return CreateGSSURGOByState(log_level=logging.INFO)
+    return CreategSSURGOByState(log_level=logging.INFO)
 
 def test_execute(victim):
     params = victim.getParameterInfo()
