@@ -82,9 +82,9 @@ class Thing:
         """
 
         self.error(message)
-        class KeenePYTError(Exception):
+        class gSSURGOError(Exception):
             pass
-        raise KeenePYTError(message)
+        raise gSSURGOError(message)
 
     def warning(self, msg):
         """Show & log a warning message."""

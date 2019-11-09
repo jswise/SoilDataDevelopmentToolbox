@@ -28,7 +28,7 @@ def test_get_caller(victim):
 
 def test_get_log_folder(victim):
     logfolder = victim.get_log_folder()
-    assert 'KeenePYT' in logfolder
+    assert 'gSSURGO' in logfolder
 
 def test_info(victim):
     victim.info('Info message.')

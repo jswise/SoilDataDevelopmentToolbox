@@ -46,7 +46,7 @@ class CreategSSURGOByMap(PYTTool):
         self.add_param('ssaLayer', 'Survey Boundary Layer', datatype='GPFeatureLayer')
         self.add_param('surveyList', 'Input SSURGO Datasets', datatype='GPString', multiValue=True)
         self.add_param('outputWS', 'Output Geodatabase', datatype='DEWorkspace')
-        self.add_param('AOI', 'Geographic Region', datatype='GPString', valueList=regions, multiValue=True)
+        self.add_param('AOI', 'Geographic Region', datatype='GPString', valueList=regions)
         self.add_param('aliasName', 'Featureclass Identifier', datatype='GPString', parameterType='Optional')
         self.add_param('useTextFiles', 'Use Text Files', datatype='GPBoolean', defaultValue=True)
 
