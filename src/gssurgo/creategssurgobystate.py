@@ -21,7 +21,7 @@ class CreategSSURGOByState(PYTTool):
     def init_parameter_info(self):
         """Set the parameters for the tool."""
 
-        value_list = ['Alabama','Alaska','Arizona','Arkansas',
+        states = ['Alabama','Alaska','Arizona','Arkansas',
             'California','Colorado','Connecticut','Delaware','District of Columbia',
             'Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas',
             'Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan',
@@ -34,7 +34,7 @@ class CreategSSURGOByState(PYTTool):
 
         self.add_param('inputFolder', 'SSURGO Downloads', datatype='DEFolder')
         self.add_param('outputFolder', 'Output Folder', datatype='DEFolder')
-        self.add_param('theTileValues', 'States', datatype='GPString', valueList=value_list, multiValue=True)
+        self.add_param('theTileValues', 'States', datatype='GPString', valueList=states, multiValue=True)
         self.add_param('bOverwriteOutput', 'Overwrite output', datatype='GPBoolean', defaultValue=True)
         self.add_param('bRequired', 'Require All Data', datatype='GPBoolean', defaultValue=True)
         self.add_param('useTextFiles', 'Use Text Files', datatype='GPBoolean', defaultValue=True)
