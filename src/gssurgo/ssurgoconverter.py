@@ -47,22 +47,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error("Unhandled error in self.errorMsg method: {}".format(str(e)))
 
-    def PrintMsg(self, msg, severity=0):
-        """Add tool message to the geoprocessor.
-
-        :param msg: The message, which may contain newlines
-        :param severity: 0 (info), 1 (warning), or 2 (error)
-        """
-
-        if severity == 0:
-            self.info(msg)
-
-        elif severity == 1:
-            self.warning(msg)
-
-        elif severity == 2:
-            self.error(msg)
-
     ## ===================================================================================
     def Number_Format(self, num, places=0, bCommas=True):
         try:
@@ -108,7 +92,7 @@ class SSURGOConverter(Thing):
                 pass
 
             except:
-                self.PrintMsg(" \nUnable to index the cointerp table", 1)
+                self.warning(" \nUnable to index the cointerp table")
 
             if not arcpy.Exists(os.path.join(outputFolder, gdbName)):
                 self.raise_error("Failed to create new geodatabase")
@@ -188,7 +172,6 @@ class SSURGOConverter(Thing):
             saCatalog = os.path.join(newDB, "SACATALOG")
             dbDate = 0
             whereClause = "UPPER(AREASYMBOL) = '" + areaSym.upper() + "'"
-            #self.PrintMsg(" \nWhereClause for sacatalog: " + areaSym, 1)
 
             if arcpy.Exists(saCatalog):
                 with arcpy.da.SearchCursor(saCatalog, ("SAVEREST"), where_clause=whereClause) as srcCursor: # pylint:disable=no-member
@@ -229,7 +212,7 @@ class SSURGOConverter(Thing):
 
             else:
                 # Unable to compare vesions. Warn user but continue
-                self.PrintMsg("Unable to find tabular file: version.txt", 1)
+                self.warning("Unable to find tabular file: version.txt")
                 return 0
 
         except Exception as e:
@@ -255,7 +238,6 @@ class SSURGOConverter(Thing):
                     for rec in srcCursor:
                         if rec[0] == "SSURGO Version":
                             dbVersion = int(str(rec[2]).split(".")[0])
-                            #self.PrintMsg("\tSSURGO Version from DB: " + dbVersion, 1)
 
                 del systemInfo
                 del templateDB
@@ -304,7 +286,6 @@ class SSURGOConverter(Thing):
                         # as Key and alias as Value.
                         #if not physicalName in tblAliases:
                         if not importFileName in tblInfo:
-                            #self.PrintMsg("\t" + importFileName + ": " + physicalName, 1)
                             tblInfo[importFileName] = physicalName, aliasName
 
                 del theMDTable
@@ -336,8 +317,6 @@ class SSURGOConverter(Thing):
         # mdstattabs
 
         try:
-            #self.PrintMsg(" \nImporting metadata tables from " + tabularFolder, 1)
-
             # Create list of tables to be imported
             tables = ['mdstatdommas', 'mdstatidxdet', 'mdstatidxmas', 'mdstatrshipdet', 'mdstatrshipmas', 'mdstattabcols', 'mdstattabs', 'mdstatdomdet']
 
@@ -432,8 +411,6 @@ class SSURGOConverter(Thing):
         #codePage = 'cp1252'
 
         try:
-            #self.PrintMsg(" \nImporting metadata tables from " + tabularFolder, 1)
-
             # Create list of text files to be imported
             txtFiles = ['mstabcol', 'msrsdet', 'mstab', 'msrsmas', 'msdommas', 'msidxmas', 'msidxdet',  'msdomdet']
 
@@ -550,10 +527,6 @@ class SSURGOConverter(Thing):
             # Something is slowing up the CONUS gSSURGO database creation at the end of this function. Could it be the
             # relationshipclasses triggering new indexes?
             arcpy.SetProgressorLabel("\tAdding additional relationships for sdv* tables...")
-            #arcpy.CreateRelationshipClass_management("sdvattribute", "sdvfolderattribute", "xSdvattribute_Sdvfolderattribute", "SIMPLE", "> SDV Folder Attribute Table", "<  SDV Attribute Table", "NONE", "ONE_TO_MANY", "NONE", "attributekey", "attributekey", "","")
-            #self.PrintMsg("    --> zSdvfolder_Sdvfolderattribute", 1)
-            #arcpy.CreateRelationshipClass_management("sdvfolder", "sdvfolderattribute", "xSdvfolder_Sdvfolderattribute", "SIMPLE", "> SDV Folder Attribute Table", "<  SDV Folder Table", "NONE", "ONE_TO_MANY", "NONE", "folderkey", "folderkey", "","")
-
 
             if len(tblList) == 0:
                 self.raise_error("No tables found in " +  outputWS)
@@ -683,22 +656,7 @@ class SSURGOConverter(Thing):
                 arcpy.ResetProgressor()
 
             # Add attribute index for each SDV table
-            self.PrintMsg(" \nSkipping indexes for sdv tables", 1)
-
-            #for tblName in sdvTables:
-            #    arcpy.SetProgressorLabel("\tAdding attribute index for " + tblName)
-            #    sdvTbl = os.path.join(outputWS, tblName)
-            #    indexName = "Indx_" + tblName
-            #    arcpy.AddIndex_management(sdvTbl, keyFields[tblName], indexName)
-
-            #    if tblName == "sdvattribute":
-            #        arcpy.AddIndex_management(sdvTbl, "attributename", "Indx_sdvattributename")
-
-            # Add SDV* table relationships. These aren't part of the XML workspace doc as of FY2018 gSSURGO
-            # Not normally necessary, but useful for diagnostics
-            #self.PrintMsg("    --> zSdvattribute_Sdvfolderattribute", 1)
-            # arcpy.SetProgressorLabel("\tRefreshing ArcCatalog listing")
-            # arcpy.RefreshCatalog(outputWS)
+            self.warning(" \nSkipping indexes for sdv tables")
 
             return True
 
@@ -722,7 +680,6 @@ class SSURGOConverter(Thing):
             if len(tblList) == 0:
                 self.raise_error("No tables found in " +  newDB)
 
-            #arcpy.SetProgressor("step", "Importing tabular data...",  0, len(dbList), 1)
             self.info(" \nImporting tabular data...")
             
             iCntr = 0
@@ -882,7 +839,7 @@ class SSURGOConverter(Thing):
                                                 iRows += 1
 
                                         except:
-                                            self.PrintMsg(" \n" + str(fixedRow), 1)
+                                            self.warning(" \n" + str(fixedRow))
                                             err = "1: Error writing line " + self.Number_Format(iRows, 0, True) + " from " + txtPath
                                             self.raise_error(err)
 
@@ -920,12 +877,10 @@ class SSURGOConverter(Thing):
                                                     # NCCPI or ruledepth zero
                                                     # should I make the 54955 a dynamic variable?
                                                     cursor.insertRow(fixedRow) # was fixedRow
-                                                    #self.PrintMsg("\t" + str(fixedRow[1]) + ";\t" + str(fixedRow[2]) + ";\t" + str(fixedRow[6]), 1)
                                                 iRows += 1
 
                                         except:
-                                            #self.PrintMsg(" \n" + ", ".join(fldNames), 1)
-                                            self.PrintMsg(str(fixedRow), 1)
+                                            self.warning(str(fixedRow))
                                             err = "2: Error writing line " + self.Number_Format(iRows, 0, True) + " from " + txtPath
                                             self.raise_error(err)
 
@@ -955,7 +910,7 @@ class SSURGOConverter(Thing):
                                                 iRows += 1
 
                                         except Exception as e:
-                                            self.PrintMsg(" \n" + str(fixedRow), 1)
+                                            self.warning(" \n" + str(fixedRow))
                                             err = "3: Error writing line " + self.Number_Format(iRows, 0, True) + " from " + txtPath
                                             err += '\n'
                                             err += str(e)
@@ -994,7 +949,7 @@ class SSURGOConverter(Thing):
 
                                     except:
                                         err = "Error importing line " + self.Number_Format(iRows, 0, True) + " from " + txtPath + " \n " + str(newRow)
-                                        self.PrintMsg(err, 1)
+                                        self.warning(err)
                                         #self.errorMsg()
                                         self.raise_error("4: Error writing line " + self.Number_Format(iRows, 0, True) + " of " + txtPath)
 
@@ -1066,10 +1021,6 @@ class SSURGOConverter(Thing):
                     arcpy.SetProgressorPosition()  # for featdesc table
                     time.sleep(1.0)
 
-                #else:
-                    # featdesc.txt file does not exist. NASIS-SSURGO download:
-                #    self.PrintMsg("\tMissing file " + txtPath, 1)
-
                 # Check the database to make sure that it completed properly, with at least the
                 # SAVEREST date populated in the SACATALOG table. Featdesc is the last table, but not
                 # a good test because often it is not populated.
@@ -1119,7 +1070,6 @@ class SSURGOConverter(Thing):
                 wc = "attributecolumnname = 'iacornsr'"
                 with arcpy.da.UpdateCursor(os.path.join(newDB, "sdvattribute"), ["attributecolumnname"], where_clause=wc) as cur: # pylint:disable=no-member
                     for rec in cur:
-                        #self.PrintMsg("\tDeleted row for iacornsr", 1)
                         cur.deleteRow()
 
             if not bVTSeptic:
@@ -1127,7 +1077,6 @@ class SSURGOConverter(Thing):
                 wc = "attributecolumnname = 'vtsepticsyscl'"
                 with arcpy.da.UpdateCursor(os.path.join(newDB, "sdvattribute"), ["attributecolumnname"], where_clause=wc) as cur: # pylint:disable=no-member
                     for rec in cur:
-                        #self.PrintMsg("\tDeleted row for VT septic", 1)
                         cur.deleteRow()                
 
             if not bNHFor:
@@ -1135,7 +1084,6 @@ class SSURGOConverter(Thing):
                 wc = "attributecolumnname = 'nhiforsoigrp'"
                 with arcpy.da.UpdateCursor(os.path.join(newDB, "sdvattribute"), ["attributecolumnname"], where_clause=wc) as cur: # pylint:disable=no-member
                     for rec in cur:
-                        #self.PrintMsg("\tDeleted row for NH forest group", 1)
                         cur.deleteRow()
 
             arcpy.SetProgressorLabel("Adding attribute index for cointerp table")
@@ -1151,8 +1099,7 @@ class SSURGOConverter(Thing):
                     arcpy.SetProgressorPosition()
 
             except:
-                self.errorMsg()
-                self.PrintMsg(" \nUnable to create new rulekey index on the cointerp table", 1)
+                self.raise_error(" \nUnable to create new rulekey index on the cointerp table")
                 
             arcpy.SetProgressorLabel("Tabular import complete")
 
@@ -1200,7 +1147,6 @@ class SSURGOConverter(Thing):
 
                 if mupolyCnt != featCnt[0]:
                     self.raise_error("MUPOLYGON imported only " + self.Number_Format(mupolyCnt, 0, True) + " polygons, should be " + self.Number_Format(featCnt[0], 0, True))
-                #self.PrintMsg(" \nMUPOLYGON imported only " + self.Number_Format(mupolyCnt, 0, True) + " polygons, should be " + self.Number_Format(featCnt[0], 0, True), 1)
 
                 # Add spatial index
                 arcpy.AddSpatialIndex_management (os.path.join(outputWS, "MUPOLYGON"))
@@ -1262,9 +1208,9 @@ class SSURGOConverter(Thing):
                 sfpointCnt = int(arcpy.GetCount_management(os.path.join(outputWS, "FEATPOINT")).getOutput(0))
 
                 if sfpointCnt != featCnt[4]:
-                    self.PrintMsg(" \nWA619 SF Points had 3136 in the original shapefile", 1)
-                    self.PrintMsg("featCnt is " + str(featCnt[4]), 1)
-                    self.PrintMsg(" \nExported " + str(sfpointCnt) + " points to geodatabase", 1)
+                    self.warning(" \nWA619 SF Points had 3136 in the original shapefile")
+                    self.warning("featCnt is " + str(featCnt[4]))
+                    self.warning(" \nExported " + str(sfpointCnt) + " points to geodatabase")
                     self.raise_error("FEATPOINT short count")
 
                 # Add spatial index
@@ -1387,7 +1333,6 @@ class SSURGOConverter(Thing):
             # Input XML workspace document used to create new gSSURGO schema in an empty geodatabase
             if AOI == "Lower 48 States":
                 #inputXML = os.path.join(xmlPath, "gSSURGO_CONUS_AlbersNAD1983.xml")
-                #self.PrintMsg(" \nUsing test xmlworkspacedocument for CONUS", 1)
                 inputXML = os.path.join(xmlPath, "gSSURGO_CONUS_AlbersNAD1983.xml")
                 tm = "WGS_1984_(ITRF00)_To_NAD_1983"
 
@@ -1418,7 +1363,7 @@ class SSURGOConverter(Thing):
                 tm = ""
 
             else:
-                self.PrintMsg(" \nNo projection is being applied", 1)
+                self.warning(" \nNo projection is being applied")
                 inputXML = os.path.join(xmlPath, "gSSURGO_GCS_WGS1984.xml")
                 tm = ""
 
@@ -1467,7 +1412,6 @@ class SSURGOConverter(Thing):
 
             # Problem when scratchGDB or scratchFolder no longer exist
             # scratchFolder = env.scratchFolder # pylint:disable=no-member
-            # self.PrintMsg(" \nScratchFolder = " + scratchFolder, 1)
             
             if not arcpy.Exists(env.scratchFolder): # pylint:disable=no-member
                 # try to create it
@@ -1502,8 +1446,6 @@ class SSURGOConverter(Thing):
             #         description = tileInfo
 
             aliasName = ""
-
-            #self.PrintMsg(" \nAlias and description: " + aliasName + "; " +  description, 1)
 
             # Get the XML Workspace Document appropriate for the specified AOI
             inputXML = self.GetXML(AOI)
@@ -1551,7 +1493,6 @@ class SSURGOConverter(Thing):
                     sfpointName = "soilsf_p_" + areaSym + ".shp"
                     sapolyName = "soilsa_a_" + areaSym + ".shp"
                     arcpy.SetProgressorLabel("Getting extent for " + areaSym.upper() + " survey area")
-                    #self.PrintMsg(" \nProcessing "  + areaSym.upper() + " survey area", 1)
 
                     if arcpy.Exists(mupolyName):
                         # Found soil polygon shapefile...
@@ -1605,13 +1546,11 @@ class SSURGOConverter(Thing):
 
                 areasymbolList = list()
                 cnt = 0
-                #self.PrintMsg(" \nSpatially sorted list of areasymbols", 1)
                 
                 for sortValu in extentList:
                     cnt += 1
                     areasym = sortValu[0]
                     areasymbolList.append(areasym)
-                    #self.PrintMsg(str(cnt) + "," + areasym.upper(), 1)
 
             else:
                 # Spatial sort has already been handled using the soil survey boundary layer.
@@ -1715,7 +1654,6 @@ class SSURGOConverter(Thing):
 
                 if arcpy.Exists(shpFile):
                     cnt = int(arcpy.GetCount_management(shpFile).getOutput(0))
-                    #self.PrintMsg(" \nCounted " + str(cnt) + " features in " + shpFile, 1)
 
                     if cnt > 0:
                         if not shpFile in sfpointList:
@@ -1861,14 +1799,11 @@ class SSURGOConverter(Thing):
                 # For some reason they are being put in the folder above env.scratchFolder (or is it one above scratchworkspace?)
                 
                 env.workspace = os.path.dirname(env.scratchFolder)
-                #self.PrintMsg(" \nCleaning log files from " + env.workspace, 1)
 
                 logFiles = arcpy.ListFiles("xxImport*.log")
 
                 if len(logFiles) > 0:
-                    #self.PrintMsg(" \nFound " + str(len(logFiles)) + " log files in " + env.workspace, 1)
                     for logFile in logFiles:
-                        #self.PrintMsg("\t\tDeleting " + logFile, 1)
                         arcpy.Delete_management(logFile)
 
                 self.info(" \nSuccessfully created a geodatabase containing the following surveys: " + queryInfo)
@@ -1896,13 +1831,11 @@ class SSURGOConverter(Thing):
                 arcpy.Delete_management(sortedSSA)
                 
             arcpy.Sort_management(ssaLayer, sortedSSA, shapeField, "UR")
-            #self.PrintMsg(" \nareasymList: " + str(areasymList), 1)
 
             if arcpy.Exists(sortedSSA):
                 with arcpy.da.SearchCursor(sortedSSA, "areasymbol", ) as cur: # pylint:disable=no-member
                     for rec in cur:
                         areaSym = rec[0].encode('ascii')
-                        #self.PrintMsg(areaSym, 1)
                         
                         if areaSym in areasymList and not areaSym in newSurveyList:
                             newSurveyList.append(areaSym)
@@ -1910,8 +1843,6 @@ class SSURGOConverter(Thing):
             else:
                 self.raise_error("Failed to produce spatial sort on survey areas")
 
-            #self.PrintMsg(" \nnewSurveyList: " + str(newSurveyList), 1)
-                    
             return newSurveyList
                                             
 
