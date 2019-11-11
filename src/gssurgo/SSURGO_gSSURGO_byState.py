@@ -30,6 +30,8 @@
 # 2017-12-21  Overlap tables fixed, so this version of the tool will now work with the Pacific Islands to create
 #             individual geodatabasess by state.
 
+from gssurgo.ssurgoconverter import SSURGOConverter
+
 ## ===================================================================================
 class MyError(Exception):
     pass
@@ -560,9 +562,6 @@ def ClipMuPolygons(targetLayer, aoiLayer, outputClip, theTile):
 
 ## ===================================================================================
 def create_gssurgo(inputFolder, outputFolder, theTileValues, bOverwriteOutput, bRequired, useTextFiles, aoiLayer, aoiField):
-    #import SSURGO_MergeSoilShapefilesbyAreasymbol_GDB
-    import gssurgo.SSURGO_Convert_to_Geodatabase
-
     # Get dictionary containing 'state abbreviations'
     stDict = StateNames()
 
@@ -641,7 +640,8 @@ def create_gssurgo(inputFolder, outputFolder, theTileValues, bOverwriteOutput, b
             # 12-25-2013 try passing more info through the stAbbrev parameter
             #
             # PrintMsg(" \nPassing list of survey areas to 'SSURGO_Convert_to_Geodatabase' script: " + ", ".join(surveyList), 1)
-            bExported = gssurgo.SSURGO_Convert_to_Geodatabase.gSSURGO(inputFolder, surveyList, outputWS, theAOI, tileInfo, useTextFiles, False, valList)
+            converter = SSURGOConverter()
+            bExported = converter.gSSURGO(inputFolder, surveyList, outputWS, theAOI, tileInfo, useTextFiles, False, valList)
 
             if bExported == False:
                 PrintMsg("\tAdding " + theTile + " to list if failed conversions", 0)

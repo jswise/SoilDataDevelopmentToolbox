@@ -1,6 +1,7 @@
 import logging
 import os
 
+import arcpy
 import pytest
 
 from gssurgo.core.gsworkspace import GSWorkspace
@@ -27,11 +28,12 @@ def victim():
 
 def test_execute(victim, input_folder, output_folder):
     selector_shp = os.path.join(input_folder, SELECTOR_NAME)
+    selector_fl = arcpy.management.MakeFeatureLayer(selector_shp, 'selector_fl')
     output_gdb = os.path.join(output_folder, 'Output.gdb')
 
     params = victim.getParameterInfo()
     params[0].value = input_folder
-    params[1].value = selector_shp
+    params[1].value = selector_fl
     params[2].value = SURVEY_LIST
     params[3].value = output_gdb
     params[4].value = REGION

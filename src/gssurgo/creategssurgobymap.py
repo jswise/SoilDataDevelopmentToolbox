@@ -5,7 +5,7 @@ import traceback
 import arcpy
 
 from gssurgo.core.pyttool import PYTTool
-import gssurgo.SSURGO_Convert_to_Geodatabase
+from gssurgo.ssurgoconverter import SSURGOConverter
 
 class CreategSSURGOByMap(PYTTool):
 
@@ -21,13 +21,14 @@ class CreategSSURGOByMap(PYTTool):
         aliasName = params['aliasName']
         useTextFiles = params['useTextFiles']
 
+        converter = SSURGOConverter(self.helpers)
         if arcpy.Exists(ssaLayer):
             # Sort_management (in_dataset, out_dataset, sort_field, {spatial_sort_method})
-            areasymbolList = gssurgo.SSURGO_Convert_to_Geodatabase.SortSurveyAreaLayer(ssaLayer, surveyList)
+            areasymbolList = converter.SortSurveyAreaLayer(ssaLayer, surveyList)
 
         else:
             areasymbolList = list()
-        gssurgo.SSURGO_Convert_to_Geodatabase.gSSURGO(inputFolder, surveyList, outputWS, AOI, aliasName, useTextFiles, False, areasymbolList)
+        converter.gSSURGO(inputFolder, surveyList, outputWS, AOI, aliasName, useTextFiles, False, areasymbolList)
     
     def init_parameter_info(self):
         """Set the parameters for the tool."""
@@ -143,9 +144,10 @@ class CreategSSURGOByMap(PYTTool):
                     db = os.path.join(path, dbName)
                     parameters[3].value = db
         except:
-            exc_type, exc_value, traceback = sys.exc_info()
-            tbinfo = traceback.format_tb(traceback)
-            theMsg = tbinfo + " \n" + str(exc_type)+ ": " + str(exc_value) + " \n"
+            pass
+            # exc_type, exc_value, traceback = sys.exc_info()
+            # tbinfo = traceback.format_tb(traceback)
+            # theMsg = tbinfo + " \n" + str(exc_type)+ ": " + str(exc_value) + " \n"
 
     def updateMessages(self, parameters):
         """Modify the messages created by internal validation for each tool
@@ -218,6 +220,7 @@ class CreategSSURGOByMap(PYTTool):
                 if os.path.dirname(outputWS).find("-") >= 0:
                     parameters[3].setErrorMessage("Illegal path contains a dash (-)")
         except:
-            exc_type, exc_value, traceback = sys.exc_info()
-            tbinfo = traceback.format_tb(traceback)
-            theMsg = tbinfo + " \n" + str(exc_type)+ ": " + str(exc_value) + " \n"
+            pass
+            # exc_type, exc_value, traceback = sys.exc_info()
+            # tbinfo = traceback.format_tb(traceback)
+            # theMsg = tbinfo + " \n" + str(exc_type)+ ": " + str(exc_value) + " \n"
