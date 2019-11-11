@@ -35,19 +35,6 @@ class SSURGOConverter(Thing):
     2. Test implementation of ITRF00 datum transformation
     """
 
-    def errorMsg(self):
-        try:
-            excInfo = sys.exc_info()
-            tb = excInfo[2]
-            tbinfo = traceback.format_tb(tb)[0]
-            exc_type, exc_value, _ = sys.exc_info()
-            theMsg = tbinfo + "\n" + str(exc_type)+ ": " + str(exc_value)
-            self.raise_error(theMsg)
-
-        except Exception as e:
-            self.raise_error("Unhandled error in self.errorMsg method: {}".format(str(e)))
-
-    ## ===================================================================================
     def Number_Format(self, num, places=0, bCommas=True):
         try:
         # Format a number according to locality and given places
@@ -62,7 +49,7 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
         
-    ## ===================================================================================
+    
     def CreateSSURGO_DB(self, outputWS, inputXML, areasymbolList, aliasName):
         # Create new 10.0 File Geodatabase using XML workspace document
         #
@@ -122,8 +109,7 @@ class SSURGOConverter(Thing):
 
         except Exception as e:
             self.raise_error(str(e))
-
-    ## ===================================================================================
+    
     def GetTableList(self, outputWS):
         # Query mdstattabs table to get list of input text files (tabular) and output tables
         # This function assumes that the MDSTATTABS table is already present and populated
@@ -156,8 +142,7 @@ class SSURGOConverter(Thing):
 
         except Exception as e:
             self.raise_error(str(e))
-
-    ## ===================================================================================
+    
     def GetTemplateDate(self, newDB, areaSym):
         # Get SAVEREST date from previously existing Template database
         # Use it to compare with the date from the WSS dataset
@@ -186,11 +171,9 @@ class SSURGOConverter(Thing):
                 # unable to open SACATALOG table in existing dataset
                 return 0
 
-        except:
-            self.errorMsg()
-            return 0
+        except Exception as e:
+            self.raise_error('GetTemplateDate: {}'.format(str(e)))
 
-    ## ===================================================================================
     def SSURGOVersionTxt(self, tabularFolder):
         # For future use. Should really create a new table for gSSURGO in order to implement properly.
         #
@@ -217,8 +200,7 @@ class SSURGOConverter(Thing):
 
         except Exception as e:
             self.raise_error(str(e))
-
-    ## ===================================================================================
+    
     def SSURGOVersionDB(self, templateDB):
         # For future use. Should really create a new table for gSSURGO in order to implement properly.
         #
@@ -252,7 +234,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    ## ===============================================================================================================
     def GetTableInfo(self, newDB):
         # Adolfo's function
         #
@@ -301,7 +282,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    ## ===================================================================================
     def ImportMDTables(self, newDB, dbList):
         # Import as single set of metadata tables from first survey area's Access database
         # These tables contain table information, relationship classes and domain values
@@ -394,7 +374,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    ## ===================================================================================
     def ImportMDTabular(self, newDB, tabularFolder, codePage):
         # Import a single set of metadata text files from first survey area's tabular
         # These files contain table information, relationship classes and domain values
@@ -513,7 +492,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    ## ===================================================================================
     def ImportTables(self, outputWS, dbList, dbVersion):
         #
         # Import tables from an Access Template database. Does not require text files, but
@@ -663,7 +641,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    ## ===================================================================================
     def ImportTabular(self, newDB, dbList, dbVersion, codePage):
         # Use csv reader method of importing text files into geodatabase for those
         # that do not have a populated SSURGO database
@@ -950,7 +927,6 @@ class SSURGOConverter(Thing):
                                     except:
                                         err = "Error importing line " + self.Number_Format(iRows, 0, True) + " from " + txtPath + " \n " + str(newRow)
                                         self.warning(err)
-                                        #self.errorMsg()
                                         self.raise_error("4: Error writing line " + self.Number_Format(iRows, 0, True) + " of " + txtPath)
 
                                 else:
@@ -1015,7 +991,6 @@ class SSURGOConverter(Thing):
                                 iRows += 1
 
                         except:
-                            self.errorMsg()
                             self.raise_error("Error loading line no. " + self.Number_Format(iRows, 0, True) + " of " + txtFile + ".txt")
 
                     arcpy.SetProgressorPosition()  # for featdesc table
@@ -1109,7 +1084,6 @@ class SSURGOConverter(Thing):
             self.raise_error(str(e))
 
 
-    ## ===================================================================================
     def AppendFeatures(self, outputWS, AOI, mupolyList, mulineList, mupointList, sflineList, sfpointList, sapolyList, featCnt):
         # Merge all spatial layers into a set of file geodatabase featureclasses
         # Compare shapefile feature count to GDB feature count
@@ -1243,7 +1217,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    ## ===================================================================================
     def StateNames(self):
         # Create dictionary object containing list of state abbreviations and their names that
         # will be used to name the file geodatabase.
@@ -1312,7 +1285,6 @@ class SSURGOConverter(Thing):
         except:
             self.raise_error("\tFailed to create list of state abbreviations (CreateStateList)")
 
-    ## ===================================================================================
     def GetXML(self, AOI):
         # Set appropriate XML Workspace Document according to AOI
         # The xml files referenced in this function must all be stored in the same folder as the
@@ -1371,11 +1343,9 @@ class SSURGOConverter(Thing):
 
             return inputXML
 
-        except:
-            self.errorMsg()
-            return ""
+        except Exception as e:
+            self.raise_error('GetXML: {}'.format(e))
 
-    ## ===================================================================================
     def gSSURGO(self, inputFolder, surveyList, outputWS, AOI, tileInfo, useTextFiles, bClipped, areasymbolList):
         # main function
 
@@ -1815,7 +1785,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    ## ===================================================================================
     def SortSurveyAreaLayer(self, ssaLayer, surveyList):
         # For the 'Create gSSURGO DB by Map' sort the polygons by extent and use that to regenerate the surveyList
         #
