@@ -374,7 +374,7 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    def ImportMDTabular(self, newDB, tabularFolder, codePage):
+    def ImportMDTabular(self, newDB, tabularFolder):
         # Import a single set of metadata text files from first survey area's tabular
         # These files contain table information, relationship classes and domain values
         # They have tobe populated before any of the other tables
@@ -397,6 +397,8 @@ class SSURGOConverter(Thing):
             tblInfo = {u'mstabcol': u'mdstattabcols', u'msrsdet': u'mdstatrshipdet', u'mstab': u'mdstattabs', u'msrsmas': u'mdstatrshipmas', u'msdommas': u'mdstatdommas', u'msidxmas': u'mdstatidxmas', u'msidxdet': u'mdstatidxdet', u'msdomdet': u'mdstatdomdet'}
 
             csv.field_size_limit(128000)
+
+            env.workspace = newDB
 
             # Process list of text files
             for txtFile in txtFiles:
@@ -641,7 +643,7 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    def ImportTabular(self, newDB, dbList, dbVersion, codePage):
+    def ImportTabular(self, newDB, dbList, dbVersion):
         # Use csv reader method of importing text files into geodatabase for those
         # that do not have a populated SSURGO database
         #
@@ -1217,74 +1219,6 @@ class SSURGOConverter(Thing):
         except Exception as e:
             self.raise_error(str(e))
 
-    def StateNames(self):
-        # Create dictionary object containing list of state abbreviations and their names that
-        # will be used to name the file geodatabase.
-        # For some areas such as Puerto Rico, U.S. Virgin Islands, Pacific Islands Area the
-        # abbrevation is
-
-        # NEED TO UPDATE THIS FUNCTION TO USE THE LAOVERLAP TABLE AREANAME. AREASYMBOL IS STATE ABBREV
-
-        try:
-            stDict = dict()
-            stDict["AL"] = "Alabama"
-            stDict["AK"] = "Alaska"
-            stDict["AS"] = "American Samoa"
-            stDict["AZ"] = "Arizona"
-            stDict["AR"] = "Arkansas"
-            stDict["CA"] = "California"
-            stDict["CO"] = "Colorado"
-            stDict["CT"] = "Connecticut"
-            stDict["DC"] = "District of Columbia"
-            stDict["DE"] = "Delaware"
-            stDict["FL"] = "Florida"
-            stDict["GA"] = "Georgia"
-            stDict["HI"] = "Hawaii"
-            stDict["ID"] = "Idaho"
-            stDict["IL"] = "Illinois"
-            stDict["IN"] = "Indiana"
-            stDict["IA"] = "Iowa"
-            stDict["KS"] = "Kansas"
-            stDict["KY"] = "Kentucky"
-            stDict["LA"] = "Louisiana"
-            stDict["ME"] = "Maine"
-            stDict["MD"] = "Maryland"
-            stDict["MA"] = "Massachusetts"
-            stDict["MI"] = "Michigan"
-            stDict["MN"] = "Minnesota"
-            stDict["MS"] = "Mississippi"
-            stDict["MO"] = "Missouri"
-            stDict["MT"] = "Montana"
-            stDict["NE"] = "Nebraska"
-            stDict["NV"] = "Nevada"
-            stDict["NH"] = "New Hampshire"
-            stDict["NJ"] = "New Jersey"
-            stDict["NM"] = "New Mexico"
-            stDict["NY"] = "New York"
-            stDict["NC"] = "North Carolina"
-            stDict["ND"] = "North Dakota"
-            stDict["OH"] = "Ohio"
-            stDict["OK"] = "Oklahoma"
-            stDict["OR"] = "Oregon"
-            stDict["PA"] = "Pennsylvania"
-            stDict["PRUSVI"] = "Puerto Rico and U.S. Virgin Islands"
-            stDict["RI"] = "Rhode Island"
-            stDict["Sc"] = "South Carolina"
-            stDict["SD"] ="South Dakota"
-            stDict["TN"] = "Tennessee"
-            stDict["TX"] = "Texas"
-            stDict["UT"] = "Utah"
-            stDict["VT"] = "Vermont"
-            stDict["VA"] = "Virginia"
-            stDict["WA"] = "Washington"
-            stDict["WV"] = "West Virginia"
-            stDict["WI"] = "Wisconsin"
-            stDict["WY"] = "Wyoming"
-            return stDict
-
-        except:
-            self.raise_error("\tFailed to create list of state abbreviations (CreateStateList)")
-
     def GetXML(self, AOI):
         # Set appropriate XML Workspace Document according to AOI
         # The xml files referenced in this function must all be stored in the same folder as the
@@ -1360,7 +1294,7 @@ class SSURGOConverter(Thing):
                 self.raise_error("ArcGIS License level must be Standard or Advanced to run this tool")
 
             env.overwriteOutput= True
-            codePage = 'iso-8859-1'  # allow csv reader to handle non-ascii characters
+            # codePage = 'iso-8859-1'  # allow csv reader to handle non-ascii characters
             # According to Gary Spivak, SDM downloads are UTF-8 and NASIS downloads are iso-8859-1
             # cp1252 also seemed to work well
             #codePage = 'utf-16' this did not work
@@ -1699,13 +1633,13 @@ class SSURGOConverter(Thing):
                             self.raise_error("Could not find " + outputWS + " to append tables to")
 
                         if useTextFiles:
-                            bMD = self.ImportMDTabular(outputWS, dbPath, codePage)  # new, import md tables from text files of last survey area
+                            bMD = self.ImportMDTabular(outputWS, dbPath)  # new, import md tables from text files of last survey area
 
                             if bMD == False:
                                 self.raise_error("")
 
                             # import attribute data from text files in tabular folder
-                            bTabular = self.ImportTabular(outputWS, dbList, dbVersion, codePage)
+                            bTabular = self.ImportTabular(outputWS, dbList, dbVersion)
 
                         else:
                             bMD = self.ImportMDTables(outputWS, dbList)
