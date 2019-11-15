@@ -28,6 +28,12 @@ def spatial_folder(data_folder):
 def tabular_folder(data_folder):
     return os.path.join(data_folder, 'soil_mh936', 'tabular')
 
+@pytest.fixture
+def db_list(tabular_folder):
+    db_name = "soil_d_" + AREA_SYMBOL_LIST[0] + ".mdb"
+    db_path = os.path.join(tabular_folder, db_name)
+    return [db_path]
+
 def get_output_folder():
     gsws = GSWorkspace()
     return gsws.get_path()
@@ -63,7 +69,18 @@ def test_CreateSSURGO_DB(victim, output_gdb):
     assert victim.CreateSSURGO_DB(output_gdb, xml_path, AREA_SYMBOL_LIST, '')
     assert arcpy.Exists(output_gdb)
     assert arcpy.Exists(os.path.join(output_gdb, 'mupolygon'))
-    
+
+def test_GetTableInfo(victim, output_gdb):
+    table_info = victim.GetTableInfo(output_gdb)
+    assert 'chaashto' in table_info
+
+def test_GetTableList(victim, output_gdb):
+    table_list = victim.GetTableList(output_gdb)
+    assert 'chaashto' in table_list
+
+def test_GetTemplateDate(victim, output_gdb):
+    assert victim.GetTemplateDate(output_gdb, AREA_SYMBOL_LIST[0]) != 0
+
 def test_GetXML(victim):
     xml_path = victim.GetXML(REGION)
     assert 'PACBasin' in xml_path
@@ -78,3 +95,17 @@ def test_gSSURGO(victim, data_folder, output_gdb):
 
 def test_ImportMDTabular(victim, output_gdb, tabular_folder):
     assert victim.ImportMDTabular(output_gdb, tabular_folder)
+
+# def test_ImportTables(victim, output_gdb, db_list):
+#     assert victim.ImportTables(output_gdb, db_list, 2)
+
+def test_ImportTabular(victim, output_gdb, db_list):
+    assert victim.ImportTabular(output_gdb, db_list, 2)
+
+def test_SSURGOVersionTxt(victim, tabular_folder):
+    assert victim.SSURGOVersionTxt(tabular_folder) == 2
+
+# def test_SSURGOVersionDB(victim, tabular_folder):
+#     template_db = os.path.join(tabular_folder, 'soildb_US_2003.mdb')
+#     result = victim.SSURGOVersionDB(template_db)
+#     pass
